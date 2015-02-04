@@ -40,10 +40,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Hoofdstuk 1\Collection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hoofdstuk 1\" />
     <Folder Include="Hoofdstuk 2\" />
     <Folder Include="Hoofdstuk 3\" />
     <Folder Include="Hoofdstuk 4\" />
