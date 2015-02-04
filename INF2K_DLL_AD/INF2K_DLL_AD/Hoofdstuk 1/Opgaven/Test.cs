@@ -9,6 +9,6 @@ namespace INF2K_DLL_AD.Hoofdstuk_1.Opgaven
 {
     class Test
     {
-
+        //?
     }
 }
