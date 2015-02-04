@@ -43,6 +43,7 @@
     <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\TimerClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
