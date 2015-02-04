@@ -8,6 +8,6 @@ namespace Opgave1._1
 {
     public class Class1
     {
-       
+       // patrick fucker tering
     }
 }
