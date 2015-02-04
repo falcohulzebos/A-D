@@ -8,13 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace test
+namespace TestForm
 {
     public partial class Form1 : Form
     {
+        Test test = new Test();
+        
+
         public Form1()
         {
             InitializeComponent();
         }
+
+        private void turnInTest_Click(object sender, EventArgs e)
+        {
+            string name = nameBox.Text;
+            int number = Int32.Parse(numberBox.Text);
+            test.addStudentTest(name, number);
+        }
+
+
     }
 }
