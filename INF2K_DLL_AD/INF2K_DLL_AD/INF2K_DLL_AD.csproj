@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +45,13 @@
     <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
-    <Compile Include="Hoofdstuk 1\Opgaven\Test.cs" />
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\Test.cs" />
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
