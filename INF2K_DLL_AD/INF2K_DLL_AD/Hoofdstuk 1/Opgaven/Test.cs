@@ -4,17 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Collections;
 
 namespace INF2K_DLL_AD.Hoofdstuk_1.Opgaven
 {
 
     class Test
     {
-        public void studentTest(string name, int number)
+        private ArrayList testPapars = new ArrayList();
+
+        public void addStudentTest(string name, int number)
         {
-            private string name;
-            private int testNumber;
+            testPapars.Add(new Student(name, number));
         }
         
+
+
+    }
+    
+    class Student
+    {
+        string studentName;
+        int testNumber;
+
+        public Student(string studentName, int testNumber)
+        {
+            this.studentName = studentName;
+            this.testNumber = testNumber;
+
+        }
+
+        public string getStudentName()
+        {
+            return studentName;
+        }
+
+        public int getTestNumber()
+        {
+            return testNumber;
+        }
+
     }
 }
