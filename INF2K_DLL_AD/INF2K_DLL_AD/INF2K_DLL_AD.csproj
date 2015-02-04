@@ -59,6 +59,11 @@
     <Folder Include="Hoofdstuk 3\" />
     <Folder Include="Hoofdstuk 4\" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
