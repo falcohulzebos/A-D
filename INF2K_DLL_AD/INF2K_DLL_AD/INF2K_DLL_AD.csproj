@@ -43,10 +43,10 @@
     <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
+    <Compile Include="Hoofdstuk 1\Opgaven\Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hoofdstuk 1\Opgaven\" />
     <Folder Include="Hoofdstuk 2\" />
     <Folder Include="Hoofdstuk 3\" />
     <Folder Include="Hoofdstuk 4\" />
