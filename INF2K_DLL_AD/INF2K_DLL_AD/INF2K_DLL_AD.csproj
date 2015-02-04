@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hoofdstuk 1\Oversimplified Timing Test.cs" />
     <Compile Include="Hoofdstuk 1\Swap.cs" />
     <Compile Include="Hoofdstuk 1\Collection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
