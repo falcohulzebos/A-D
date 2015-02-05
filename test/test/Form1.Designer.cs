@@ -37,11 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchNameBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // turnInTest
             // 
-            this.turnInTest.Location = new System.Drawing.Point(112, 54);
+            this.turnInTest.Location = new System.Drawing.Point(76, 12);
             this.turnInTest.Name = "turnInTest";
             this.turnInTest.Size = new System.Drawing.Size(97, 30);
             this.turnInTest.TabIndex = 0;
@@ -61,7 +63,7 @@
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(-1, 54);
+            this.Search.Location = new System.Drawing.Point(76, 140);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(97, 30);
             this.Search.TabIndex = 2;
@@ -80,14 +82,14 @@
             // 
             // nameBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(92, 107);
+            this.nameBox.Location = new System.Drawing.Point(76, 48);
             this.nameBox.Name = "nameBox";
             this.nameBox.Size = new System.Drawing.Size(101, 20);
             this.nameBox.TabIndex = 4;
             // 
             // numberBox
             // 
-            this.numberBox.Location = new System.Drawing.Point(92, 133);
+            this.numberBox.Location = new System.Drawing.Point(76, 74);
             this.numberBox.Name = "numberBox";
             this.numberBox.Size = new System.Drawing.Size(101, 20);
             this.numberBox.TabIndex = 5;
@@ -95,7 +97,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 110);
+            this.label1.Location = new System.Drawing.Point(6, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 6;
@@ -104,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 136);
+            this.label2.Location = new System.Drawing.Point(6, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 7;
@@ -118,11 +120,29 @@
             this.textBox1.Size = new System.Drawing.Size(227, 42);
             this.textBox1.TabIndex = 8;
             // 
+            // searchNameBox
+            // 
+            this.searchNameBox.Location = new System.Drawing.Point(76, 194);
+            this.searchNameBox.Name = "searchNameBox";
+            this.searchNameBox.Size = new System.Drawing.Size(100, 20);
+            this.searchNameBox.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 358);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.searchNameBox);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -151,6 +171,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox searchNameBox;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -43,7 +43,9 @@ namespace TestForm
         private void Search_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
-            test.searchTest(nameBox.Text);
+            string searchName = searchNameBox.Text;
+            
+            textBox1.Text = test.searchTest(searchName); 
         }
 
 

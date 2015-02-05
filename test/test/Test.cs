@@ -13,8 +13,7 @@ namespace TestForm
     {
             
 
-        private string studentName;
-        private int testNumber;
+       
         public string students;
         private ArrayList testPapers = new ArrayList();
         private ArrayList testPapersNew = new ArrayList();
@@ -39,21 +38,32 @@ namespace TestForm
         }
 
 
-        public void searchTest(string name)
+        public string searchTest(string name)
         {
+            Student testToRemove=null;
+            string returnText= "";
             foreach (Student tst in testPapers)
             {
 
                 if (tst.getStudentName() == name)
                 {
                     testPapersNew.Add(tst);
-                    testPapers.Remove(tst);
-                    studentName = tst.getStudentName();
-                    testNumber = tst.getTestNumber();
+
+                    testToRemove = tst;
+
+                    returnText = "student: " + tst.getStudentName() + " Met testnummer: " + tst.getTestNumber();
+                   
                 }
+
             }
+            if (testToRemove != null)
+            {
+                testPapers.Remove(testToRemove);
+            }
+            return returnText;
         }
 
+       
     }
     
     class Student
