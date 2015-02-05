@@ -65,7 +65,7 @@ namespace TestForm
         }
         public string showChecking()
         {
-            string = ""; 
+            students2 = ""; 
             foreach(Student checking in testPapersNew)
             {
                  string naam2 = checking.getStudentName();
