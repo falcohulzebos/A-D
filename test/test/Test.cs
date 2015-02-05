@@ -15,17 +15,17 @@ namespace TestForm
 
         private string studentName;
         private int testNumber;
-        private ArrayList testPapars = new ArrayList();
+        private ArrayList testPapers = new ArrayList();
 
         public void addStudentTest(string name, int number)
         {
-            testPapars.Add(new Student(name, number));
+            testPapers.Add(new Student(name, number));
         }
         
         public void showStudents()
         {
             string students = ""; 
-            foreach(object Student in testPapars)
+            foreach(object Student in testPapers)
             {
                 students += Student.ToString() + "\r\n";
             }
@@ -35,13 +35,13 @@ namespace TestForm
 
         public void searchTest(string name)
         {
-            foreach (Student test in testPapars)
+            foreach (Student test in testPapers)
             {
 
                 if (test.getStudentName() == name)
                 {
                     testPapersNew.Add(test);
-                    testPapars.Remove(test);
+                    testPapers.Remove(test);
                     studentName = test.getStudentName();
                     testNumber = test.getTestNumber();
                 }
