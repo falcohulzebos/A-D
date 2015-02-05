@@ -18,7 +18,13 @@ namespace TestForm
             testPapars.Add(new Student(name, number));
         }
         
-
+        public void showStudents()
+        {
+            foreach(object Student in testPapars)
+            {
+                Console.WriteLine(Student);
+            }
+        }
 
     }
     

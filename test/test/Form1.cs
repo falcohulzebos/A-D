@@ -27,6 +27,11 @@ namespace TestForm
             test.addStudentTest(name, number);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            test.showStudents();
+        }
+
 
     }
 }
