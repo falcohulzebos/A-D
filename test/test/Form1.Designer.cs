@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.turnInTest = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ShowStudents = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.nameBox = new System.Windows.Forms.TextBox();
             this.numberBox = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@
             // 
             // turnInTest
             // 
-            this.turnInTest.Location = new System.Drawing.Point(49, 54);
+            this.turnInTest.Location = new System.Drawing.Point(112, 54);
             this.turnInTest.Name = "turnInTest";
             this.turnInTest.Size = new System.Drawing.Size(97, 30);
             this.turnInTest.TabIndex = 0;
@@ -49,24 +49,25 @@
             this.turnInTest.UseVisualStyleBackColor = true;
             this.turnInTest.Click += new System.EventHandler(this.turnInTest_Click);
             // 
-            // button2
+            // ShowStudents
             // 
-            this.button2.Location = new System.Drawing.Point(218, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ShowStudents.Location = new System.Drawing.Point(340, 54);
+            this.ShowStudents.Name = "ShowStudents";
+            this.ShowStudents.Size = new System.Drawing.Size(97, 30);
+            this.ShowStudents.TabIndex = 1;
+            this.ShowStudents.Text = "Show students";
+            this.ShowStudents.UseVisualStyleBackColor = true;
+            this.ShowStudents.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // Search
             // 
-            this.button3.Location = new System.Drawing.Point(343, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(97, 30);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Search.Location = new System.Drawing.Point(-1, 54);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(97, 30);
+            this.Search.TabIndex = 2;
+            this.Search.Text = "Search Student";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // button4
             // 
@@ -128,8 +129,8 @@
             this.Controls.Add(this.numberBox);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.ShowStudents);
             this.Controls.Add(this.turnInTest);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -142,8 +143,8 @@
         #endregion
 
         private System.Windows.Forms.Button turnInTest;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ShowStudents;
+        private System.Windows.Forms.Button Search;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox nameBox;
         private System.Windows.Forms.TextBox numberBox;

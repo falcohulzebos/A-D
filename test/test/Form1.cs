@@ -40,6 +40,11 @@ namespace TestForm
 
         }
 
+        private void Search_Click(object sender, EventArgs e)
+        {
+            test.searchTest(nameBox.Text);
+        }
+
 
     }
 }
