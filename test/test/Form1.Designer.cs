@@ -71,7 +71,7 @@
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(100, 30);
             this.Search.TabIndex = 2;
-            this.Search.Text = "Remove Student";
+            this.Search.Text = "Student checks";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
