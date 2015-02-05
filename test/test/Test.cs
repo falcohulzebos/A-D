@@ -11,12 +11,13 @@ namespace TestForm
 
     class Test
     {
-        private ArrayList testPapersNew = new ArrayList;    
+            
 
         private string studentName;
         private int testNumber;
+        public string students;
         private ArrayList testPapers = new ArrayList();
-
+        private ArrayList testPapersNew = new ArrayList();
         public void addStudentTest(string name, int number)
         {
             testPapers.Add(new Student(name, number));
@@ -28,6 +29,7 @@ namespace TestForm
             foreach(object Student in testPapers)
             {
                 students += Student.ToString() + "\r\n";
+                
             }
 
         }
