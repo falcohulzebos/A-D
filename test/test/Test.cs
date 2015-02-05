@@ -20,10 +20,12 @@ namespace TestForm
         
         public void showStudents()
         {
+            string students = ""; 
             foreach(object Student in testPapars)
             {
-                Console.WriteLine(Student);
+                students += Student.ToString() + "\r\n";
             }
+
         }
 
 
