@@ -11,6 +11,10 @@ namespace TestForm
 
     class Test
     {
+        private ArrayList testPapersNew = new ArrayList;    
+
+        private string studentName;
+        private int testNumber;
         private ArrayList testPapars = new ArrayList();
 
         public void addStudentTest(string name, int number)
@@ -26,6 +30,22 @@ namespace TestForm
                 students += Student.ToString() + "\r\n";
             }
             
+        }
+
+
+        public void searchTest(string name)
+        {
+            foreach (Student test in testPapars)
+            {
+
+                if (test.getStudentName() == name)
+                {
+                    testPapersNew.Add(test);
+                    testPapars.Remove(test);
+                    studentName = test.getStudentName();
+                    testNumber = test.getTestNumber();
+                }
+            }
         }
 
     }
