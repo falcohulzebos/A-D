@@ -55,6 +55,11 @@ namespace TestForm
             textBox2.Text = test.students2;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
