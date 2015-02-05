@@ -25,7 +25,7 @@ namespace TestForm
             {
                 students += Student.ToString() + "\r\n";
             }
-
+            
         }
 
     }
