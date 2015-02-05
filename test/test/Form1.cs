@@ -25,6 +25,8 @@ namespace TestForm
             string name = nameBox.Text;
             int number = Int32.Parse(numberBox.Text);
             test.addStudentTest(name, number);
+            nameBox.Clear();
+            numberBox.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
