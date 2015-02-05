@@ -29,6 +29,7 @@ namespace TestForm
 
         private void button2_Click(object sender, EventArgs e)
         {
+            test.showStudents();
             textBox1.Text = test.students;
         }
 

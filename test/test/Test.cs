@@ -18,19 +18,23 @@ namespace TestForm
         public string students;
         private ArrayList testPapers = new ArrayList();
         private ArrayList testPapersNew = new ArrayList();
+
         public void addStudentTest(string name, int number)
         {
             testPapers.Add(new Student(name, number));
         }
         
-        public void showStudents()
+        public string showStudents()
         {
-            string students = ""; 
-            foreach(object Student in testPapers)
+            students = ""; 
+            foreach(Student testStudent in testPapers)
             {
-                students += Student.ToString() + "\r\n";
+                string naam = testStudent.getStudentName();
+                string nummer = testStudent.getTestNumber().ToString();
+                students += "student: "+ naam + "Met testnummer: " + nummer + "\r\n";
                 
             }
+            return students;
             
         }
 
