@@ -41,15 +41,15 @@ namespace TestForm
 
         public void searchTest(string name)
         {
-            foreach (Student test in testPapers)
+            foreach (Student tst in testPapers)
             {
 
-                if (test.getStudentName() == name)
+                if (tst.getStudentName() == name)
                 {
-                    testPapersNew.Add(test);
-                    testPapers.Remove(test);
-                    studentName = test.getStudentName();
-                    testNumber = test.getTestNumber();
+                    testPapersNew.Add(tst);
+                    testPapers.Remove(tst);
+                    studentName = tst.getStudentName();
+                    testNumber = tst.getTestNumber();
                 }
             }
         }
