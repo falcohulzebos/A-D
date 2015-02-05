@@ -31,7 +31,7 @@ namespace TestForm
             {
                 string naam = testStudent.getStudentName();
                 string nummer = testStudent.getTestNumber().ToString();
-                students += "student: "+ naam + "Met testnummer: " + nummer + "\r\n";
+                students += "student: "+ naam + " Met testnummer: " + nummer + "\r\n";
                 
             }
             return students;
