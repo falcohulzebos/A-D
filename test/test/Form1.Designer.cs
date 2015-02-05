@@ -49,7 +49,7 @@
             // 
             this.turnInTest.Location = new System.Drawing.Point(76, 12);
             this.turnInTest.Name = "turnInTest";
-            this.turnInTest.Size = new System.Drawing.Size(97, 30);
+            this.turnInTest.Size = new System.Drawing.Size(100, 30);
             this.turnInTest.TabIndex = 0;
             this.turnInTest.Text = "turn test in";
             this.turnInTest.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             // 
             // ShowStudents
             // 
-            this.ShowStudents.Location = new System.Drawing.Point(340, 54);
+            this.ShowStudents.Location = new System.Drawing.Point(340, 12);
             this.ShowStudents.Name = "ShowStudents";
             this.ShowStudents.Size = new System.Drawing.Size(97, 40);
             this.ShowStudents.TabIndex = 1;
@@ -67,9 +67,9 @@
             // 
             // Search
             // 
-            this.Search.Location = new System.Drawing.Point(76, 140);
+            this.Search.Location = new System.Drawing.Point(76, 116);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(97, 30);
+            this.Search.Size = new System.Drawing.Size(100, 30);
             this.Search.TabIndex = 2;
             this.Search.Text = "Remove Student";
             this.Search.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 51);
+            this.label1.Location = new System.Drawing.Point(6, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 6;
@@ -111,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 77);
+            this.label2.Location = new System.Drawing.Point(6, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 121);
+            this.textBox1.Location = new System.Drawing.Point(340, 77);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -128,7 +128,7 @@
             // 
             // searchNameBox
             // 
-            this.searchNameBox.Location = new System.Drawing.Point(76, 194);
+            this.searchNameBox.Location = new System.Drawing.Point(76, 152);
             this.searchNameBox.Name = "searchNameBox";
             this.searchNameBox.Size = new System.Drawing.Size(100, 20);
             this.searchNameBox.TabIndex = 9;
@@ -136,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 197);
+            this.label3.Location = new System.Drawing.Point(6, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 10;
@@ -172,7 +172,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 97);
+            this.label6.Location = new System.Drawing.Point(337, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 13);
             this.label6.TabIndex = 14;
