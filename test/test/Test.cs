@@ -15,6 +15,7 @@ namespace TestForm
 
        
         public string students;
+        public string students2;
         private ArrayList testPapers = new ArrayList();
         private ArrayList testPapersNew = new ArrayList();
 
@@ -62,7 +63,18 @@ namespace TestForm
             }
             return returnText;
         }
-
+        public string showChecking()
+        {
+            foreach(Student checking in testPapersNew)
+            {
+                 string naam2 = checking.getStudentName();
+                string nummer2 = checking.getTestNumber().ToString();
+                students2 += "student: "+ naam2 + " Met testnummer: " + nummer2 + "\r\n";
+                
+            }
+            return students2;
+            }
+        }
        
     }
     

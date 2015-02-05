@@ -42,10 +42,17 @@ namespace TestForm
 
         private void Search_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            
             string searchName = searchNameBox.Text;
             
-            textBox1.Text = test.searchTest(searchName); 
+            textBox1.Text = test.searchTest(searchName);
+            test.showStudents();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            test.showChecking();
+            textBox2.Text = test.students2;
         }
 
 

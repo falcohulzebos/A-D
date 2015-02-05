@@ -39,6 +39,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchNameBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // turnInTest
@@ -55,9 +56,9 @@
             // 
             this.ShowStudents.Location = new System.Drawing.Point(340, 54);
             this.ShowStudents.Name = "ShowStudents";
-            this.ShowStudents.Size = new System.Drawing.Size(97, 30);
+            this.ShowStudents.Size = new System.Drawing.Size(97, 40);
             this.ShowStudents.TabIndex = 1;
-            this.ShowStudents.Text = "Show students";
+            this.ShowStudents.Text = "Show turned in tests";
             this.ShowStudents.UseVisualStyleBackColor = true;
             this.ShowStudents.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -67,18 +68,19 @@
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(97, 30);
             this.Search.TabIndex = 2;
-            this.Search.Text = "Search Student";
+            this.Search.Text = "Remove Student";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(470, 12);
+            this.button4.Location = new System.Drawing.Point(340, 169);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(97, 30);
+            this.button4.Size = new System.Drawing.Size(97, 41);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "Show checking students";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // nameBox
             // 
@@ -136,11 +138,20 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "name";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(340, 217);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(223, 47);
+            this.textBox2.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(661, 358);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.searchNameBox);
             this.Controls.Add(this.textBox1);
@@ -173,6 +184,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox searchNameBox;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
