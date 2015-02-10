@@ -12,7 +12,8 @@ namespace QueryperformanceCounterClass
 {
     public partial class Form1 : Form
     {
-        
+        private Object thisLock = new Object();
+        Lijsten arrays = new Lijsten();
         public Form1()
         {
             InitializeComponent();
@@ -25,7 +26,10 @@ namespace QueryperformanceCounterClass
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            lock (thisLock)
+            {
+                arrays.FillArray();
+            }
         }
     }
 }
