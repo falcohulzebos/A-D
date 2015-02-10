@@ -8,6 +8,18 @@ namespace INF2K_DLL_AD.Hoofdstuk_1
 {
     public class Collection : CollectionBase
     {
+        public Int16 this[int index]
+        {
+            get
+            {
+                return ((Int16)List[index]);
+            }
+            set
+            {
+                List[index] = value;
+            }
+        }
+
         public void Add(Object item)
         {
             InnerList.Add(item);
@@ -25,6 +37,26 @@ namespace INF2K_DLL_AD.Hoofdstuk_1
         public new int Count()
         {
             return InnerList.Count;
+        }
+
+        public void Insert(int index, Object item)
+        {
+            InnerList.Insert(index, item);
+        }
+
+        public int IndexOf(Object item)
+        {
+            return (List.IndexOf(item));
+        }
+
+        public bool Contains(Object item)
+        {
+            return (List.Contains(item));
+        }
+
+        public void RemoveAt()
+        {
+            int index;
         }
 
         class chapter1
