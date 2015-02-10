@@ -63,6 +63,7 @@ namespace TestForm
             }
             return returnText;
         }
+
         public string showChecking()
         {
             students2 = ""; 
@@ -76,6 +77,14 @@ namespace TestForm
             return students2;
             }
         
+        public void outForCheck()
+        {
+            foreach(Student s in outForChecking)
+            {
+                SubmittedTests.Add(s);
+            }
+            outForChecking.Clear();
+        }
        
     }
     
