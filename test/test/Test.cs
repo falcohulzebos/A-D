@@ -15,18 +15,19 @@ namespace TestForm
 
        
         public string students;
-        private ArrayList testPapers = new ArrayList();
-        private ArrayList testPapersNew = new ArrayList();
+        public string students2;
+        private ArrayList SubmittedTests = new ArrayList();
+        private ArrayList outForChecking = new ArrayList();
 
         public void addStudentTest(string name, int number)
         {
-            testPapers.Add(new Student(name, number));
+            SubmittedTests.Add(new Student(name, number));
         }
         
         public string showStudents()
         {
             students = ""; 
-            foreach(Student testStudent in testPapers)
+            foreach(Student testStudent in SubmittedTests)
             {
                 string naam = testStudent.getStudentName();
                 string nummer = testStudent.getTestNumber().ToString();
@@ -42,12 +43,12 @@ namespace TestForm
         {
             Student testToRemove=null;
             string returnText= "";
-            foreach (Student tst in testPapers)
+            foreach (Student tst in SubmittedTests)
             {
 
                 if (tst.getStudentName() == name)
                 {
-                    testPapersNew.Add(tst);
+                    outForChecking.Add(tst);
 
                     testToRemove = tst;
 
@@ -58,11 +59,23 @@ namespace TestForm
             }
             if (testToRemove != null)
             {
-                testPapers.Remove(testToRemove);
+                SubmittedTests.Remove(testToRemove);
             }
             return returnText;
         }
-
+        public string showChecking()
+        {
+            students2 = ""; 
+            foreach(Student checking in outForChecking)
+            {
+                 string naam2 = checking.getStudentName();
+                string nummer2 = checking.getTestNumber().ToString();
+                students2 += "student: "+ naam2 + " Met testnummer: " + nummer2 + "\r\n";
+                
+            }
+            return students2;
+            }
+        
        
     }
     
@@ -88,5 +101,5 @@ namespace TestForm
             return testNumber;
         }
 
-    }
+       }
 }
