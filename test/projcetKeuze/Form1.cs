@@ -8,29 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QueryperformanceCounterClass
+
+using System.Diagnostics;
+
+
+namespace projcetKeuze
 {
     public partial class Form1 : Form
     {
-        
-        Lijsten arrays = new Lijsten();
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            double duration;
-            
-            duration = arrays.FillArray();
-            textBox1.Text = duration.ToString();
-            
+          
         }
     }
 }
