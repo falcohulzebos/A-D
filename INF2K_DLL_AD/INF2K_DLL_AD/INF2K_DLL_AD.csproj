@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
