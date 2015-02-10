@@ -19,11 +19,20 @@ namespace TestForm
         private ArrayList SubmittedTests = new ArrayList();
         private ArrayList outForChecking = new ArrayList();
 
+        /// <summary>
+        /// voeg een studentnaam en testnummer aan de stapel met tests toe
+        /// </summary>
+        /// <param name="name">studentnaam </param>
+        /// <param name="number">testnummer</param>
         public void addStudentTest(string name, int number)
         {
             SubmittedTests.Add(new Student(name, number));
         }
         
+        /// <summary>
+        /// geef alle namen en testnummers weer die op de stapel zijn
+        /// </summary>
+        /// <returns>string met namen en testnummers</returns>
         public string showStudents()
         {
             students = ""; 
@@ -38,7 +47,11 @@ namespace TestForm
             
         }
 
-
+        /// <summary>
+        /// zoekt een test op aan de hand van de naam en zet deze in outForChecking
+        /// </summary>
+        /// <param name="name">naam van de student</param>
+        /// <returns>de naam en testnummer als deze gevonden is</returns>
         public string searchTest(string name)
         {
             Student testToRemove=null;
@@ -64,6 +77,10 @@ namespace TestForm
             return returnText;
         }
 
+        /// <summary>
+        /// geeft alle tests in outForChecking weer
+        /// </summary>
+        /// <returns>string met namen en testnummers</returns>
         public string showChecking()
         {
             students2 = ""; 
@@ -76,7 +93,11 @@ namespace TestForm
             }
             return students2;
             }
-        
+
+        /// <summary>
+        /// zet alle tests die in outForChecking staan terug in
+        /// Submittedtests en cleart outForChecking
+        /// </summary>
         public void outForCheck()
         {
             foreach(Student s in outForChecking)
@@ -92,7 +113,11 @@ namespace TestForm
     {
         string studentName;
         int testNumber;
-
+        /// <summary>
+        /// maakt een Student object met studentnaam en testnummer
+        /// </summary>
+        /// <param name="studentName">de naam van de student</param>
+        /// <param name="testNumber">het toetsnummer</param>
         public Student(string studentName, int testNumber)
         {
             this.studentName = studentName;
@@ -100,11 +125,19 @@ namespace TestForm
 
         }
 
+        /// <summary>
+        /// geeft de studentnaam 
+        /// </summary>
+        /// <returns>string met studentnaam</returns>
         public string getStudentName()
         {
             return studentName;
         }
 
+        /// <summary>
+        /// geeft het testnummer
+        /// </summary>
+        /// <returns>int testnummer</returns>
         public int getTestNumber()
         {
             return testNumber;
