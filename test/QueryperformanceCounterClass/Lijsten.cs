@@ -14,7 +14,23 @@ namespace QueryperformanceCounterClass
         private int i;
 
 
+
         public double FillArray()
+        {
+            lock (thisLock)
+            {
+                Q.Start();
+                for (i = 0; i < 1000000; i++)
+                {
+                    numbers[i] = i;
+                }
+                Q.Stop();
+            }
+
+            return Q.Duration(1);
+
+        }
+        public double FillCollection()
         {
             lock (thisLock)
             {

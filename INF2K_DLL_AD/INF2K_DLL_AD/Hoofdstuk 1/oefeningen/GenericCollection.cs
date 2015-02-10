@@ -10,11 +10,11 @@ namespace INF2K_DLL_AD.Hoofdstuk_1.oefeningen
     {
             public interface ICollection<T> : IEnumerable<T>
         {
-            void Add(T item);
-            bool Remove(T item);
-            void Clear();
-            bool Contains(T item);
-            int Count { get; }
+            public void Add(T item);
+            public bool Remove(T item);
+            public void Clear();
+            public bool Contains(T item);
+             public int Count { get; }
         }
     }
 }
