@@ -20,6 +20,13 @@ namespace TestForm
             InitializeComponent();
         }
 
+        /// <summary>
+        /// haalt de naam en testnummer uit de textvelden
+        /// en roept sddStudentTest aan om de test toe te voegen
+        /// aan submittedTests
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void turnInTest_Click(object sender, EventArgs e)
         {
             string name = nameBox.Text;
@@ -29,6 +36,11 @@ namespace TestForm
             numberBox.Clear();
         }
 
+        /// <summary>
+        /// roept showStudents aan om de test weer te geven in textBox1
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             test.showStudents();
@@ -40,6 +52,11 @@ namespace TestForm
 
         }
 
+        /// <summary>
+        /// roept searchTest aan 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Search_Click(object sender, EventArgs e)
         {
             
@@ -49,12 +66,23 @@ namespace TestForm
             test.showStudents();
         }
 
+        /// <summary>
+        /// geeft alle outForChecking test weer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button4_Click(object sender, EventArgs e)
         {
             test.showChecking();
             textBox2.Text = test.students2;
         }
 
+        /// <summary>
+        /// zet alle tests terug in submittedtestes 
+        /// en cleart outForChecking
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             test.outForCheck();
