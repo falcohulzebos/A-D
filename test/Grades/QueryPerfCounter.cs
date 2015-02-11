@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace QueryperformanceCounterClass
+namespace Grades
 { //
     public class QueryPerfCounter
     {
