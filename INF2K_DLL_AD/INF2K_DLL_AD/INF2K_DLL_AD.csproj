@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -47,22 +48,29 @@
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
     <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\Test.cs" />
-    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.cs" />
     <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.Designer.cs">
       <DependentUpon>testForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hoofdstuk 2\GradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 2\GradesForm.Designer.cs">
+      <DependentUpon>GradesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoofdstuk 2\GradeTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hoofdstuk 2\" />
     <Folder Include="Hoofdstuk 3\" />
     <Folder Include="Hoofdstuk 4\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.resx">
       <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoofdstuk 2\GradesForm.resx">
+      <DependentUpon>GradesForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
