@@ -119,6 +119,7 @@
             this.button9.TabIndex = 4;
             this.button9.Text = "Highest";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label1
             // 

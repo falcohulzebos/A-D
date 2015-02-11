@@ -17,7 +17,16 @@ namespace Grades
 
         public GradeFormClass()
         {
-            
+            fillArrayList();
+        }
+
+        private void fillArrayList()
+        {
+            for (int i = 10; i < 100; i = i + 10)
+            {
+                AGrades.Add(i);
+            }
+
         }
 
         public string max()
@@ -141,6 +150,16 @@ namespace Grades
 
 
             return returnString; 
+        }
+
+        public string AMax()
+        {
+
+        }
+
+        public string AMin()
+        {
+
         }
 
     }

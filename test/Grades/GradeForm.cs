@@ -51,5 +51,10 @@ namespace Grades
         {
             textBox4.Text = g.average();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = g.max();
+        }
     }
 }
