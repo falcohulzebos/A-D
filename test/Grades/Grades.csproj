@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1FB28480-948F-4B25-9E01-50462D199559}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{95F64EDF-E29A-42DC-B079-3F7C971BAC1E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>INF2K_DLL_AD</RootNamespace>
-    <AssemblyName>INF2K_DLL_AD</AssemblyName>
+    <RootNamespace>Grades</RootNamespace>
+    <AssemblyName>Grades</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,46 +34,48 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.DirectoryServices" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
-    <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
-    <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
-    <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
-    <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
-    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\Test.cs" />
-    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.cs" />
-    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.Designer.cs">
-      <DependentUpon>testForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Hoofdstuk 2\GradesForm.cs">
+    <Compile Include="GradeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Hoofdstuk 2\GradesForm.Designer.cs">
-      <DependentUpon>GradesForm.cs</DependentUpon>
+    <Compile Include="GradeForm.Designer.cs">
+      <DependentUpon>GradeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hoofdstuk 2\GradeTracker.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GradeForm.resx">
+      <DependentUpon>GradeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hoofdstuk 3\" />
-    <Folder Include="Hoofdstuk 4\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.resx">
-      <DependentUpon>testForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Hoofdstuk 2\GradesForm.resx">
-      <DependentUpon>GradesForm.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
