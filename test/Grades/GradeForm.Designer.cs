@@ -1,5 +1,5 @@
 ﻿namespace Grades
-{
+{///\\\
     partial class GradeForm
     {
         /// <summary>

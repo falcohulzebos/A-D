@@ -52,6 +52,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryPerfCounter.cs" />
     <EmbeddedResource Include="GradeForm.resx">
       <DependentUpon>GradeForm.cs</DependentUpon>
     </EmbeddedResource>
