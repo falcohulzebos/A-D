@@ -8,19 +8,18 @@ namespace Grades
 {
     class GradeFormClass
     {
-        int[] grades = { 12, 56, 89, 65, 61, 36, 45, 23 };
-        int[] grades2 = { 99, 30, 10, 77, 45, 55, 67, 100 };
-         public void Max()
+        int[,] grades = { { 10, 20 }, { 30, 40 }, { 50, 60 }, { 70, 80 } };
+         public string Max()
          {
-             grades.Max().ToString();
+            return grades[].Max().ToString();
          }
-        public void Average()
+        public string Average()
          {
-             grades.Average().ToString();
+             return grades[].Average().ToString();
          }
-        public void Min()
+        public string Min()
         {
-            grades.Min().ToString();
+            return grades[].Min().ToString();
         }
 
     }
