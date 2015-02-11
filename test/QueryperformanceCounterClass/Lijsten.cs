@@ -8,7 +8,7 @@ namespace QueryperformanceCounterClass
 {
     class Lijsten
     {
-        
+        ICollection<int> ids = new List<int>();
         private Object thisLock = new Object();
         QueryPerfCounter Q = new QueryPerfCounter();
         int[] numbers = new int[1000000];
@@ -38,7 +38,7 @@ namespace QueryperformanceCounterClass
                 Q.Start();
                 for (i = 0; i < 1000000; i++)
                 {
-                    numbers[i] = i;
+                    ids.Add(i);
                 }
                 Q.Stop();
             }

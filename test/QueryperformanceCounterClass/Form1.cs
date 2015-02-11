@@ -21,7 +21,9 @@ namespace QueryperformanceCounterClass
 
         private void button2_Click(object sender, EventArgs e)
         {
+            double duration;
 
+            duration = ids.FillCollection();
         }
 
         private void button1_Click(object sender, EventArgs e)
