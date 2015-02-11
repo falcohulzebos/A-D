@@ -43,11 +43,35 @@ namespace CArray
         }
         static void Main()
         {
-            CArray nums = new CArray(50);
-            for(int i = 0; i <=49; i++)
+            CArray nums = new CArray(10);
+            Random rnd = new Random(100);
+            for(int i = 0; i <10; i++)
             {
-                nums.insert(i);
+                nums.insert((int)(rnd.NextDouble() * 100));
+                Console.WriteLine("Before sorting: ");
                 nums.DisplayElements();
+                Console.WriteLine("During sorting: ");
+                nums.bubbleSort();
+                Console.WriteLine("After sorting: ");
+                nums.DisplayElements();
+            }
+        }
+        
+        public void bubbleSort()
+        {
+            int temp;
+            for(int outer = upper; outer >=1; outer++)
+            {
+                for(int inner = 0; inner <= outer - 1; inner++)
+                {
+                    if((int)arr[inner] > arr[inner + 1])
+                    {
+                        temp = arr[inner];
+                        arr[inner] = arr[inner + 1];
+                        arr[inner + 1] = temp;
+                    }
+                }
+                this.DisplayElements();
             }
         }
     }
