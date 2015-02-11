@@ -19,17 +19,37 @@ namespace Grades
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            textBox3.Text = g.Max();
+            textBox3.Text = g.multiMax();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //textBox3.Text = "Engels: " + g.Average() + "\r\nWiskunde: " + g.Average();
+            textBox3.Text = g.multiAverage();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-          //  textBox3.Text = "Engels: " + g.Min() + "\r\nWiskunde: " + g.Min();
+            textBox3.Text = g.multiMin();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = g.min();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBox4.Text = g.average();
         }
     }
 }
