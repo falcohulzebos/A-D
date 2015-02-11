@@ -11,7 +11,7 @@ namespace Grades
     {
         private Object thisLock = new Object();
         int[,] grades = new int [,] { { 10, 20, 30, 40 }, { 50, 60, 70, 80 } };
-        int[] singleGrades = new int[10000];
+        int[] singleGrades = new int[500];
         ArrayList AGrades = new ArrayList();
         QueryPerfCounter Q = new QueryPerfCounter();
         private double duration;
@@ -98,16 +98,15 @@ namespace Grades
             lock (thisLock)
             {
                 Q.Start();
-                for (int i = 0; i < singleGrades.Length; i++)
+                for (int i = 0; i < singleGrades.Count(); i++)
                 {
 
 
-                    temp += singleGrades[i];
-
+                    temp = temp + singleGrades[i];
+                   
                 }
-                average = temp / singleGrades.Length;
-                Console.WriteLine(temp);
-                Console.WriteLine(singleGrades.Length);
+                average = temp / singleGrades.Count();
+               
                 Q.Stop();
             }
             duration = Q.Duration(1);
