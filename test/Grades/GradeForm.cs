@@ -9,7 +9,9 @@ namespace Grades
         GradeFormClass g = new GradeFormClass();
         public GradeForm()
         {
+
             InitializeComponent();
+            
         }
 
         private void GradeForm_Load(object sender, EventArgs e)
@@ -56,5 +58,39 @@ namespace Grades
         {
             textBox4.Text = g.max();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = g.AMax();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = g.AAverage();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBox5.Text = g.AMin();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            textBox6.Text = g.getDuration().ToString();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            textBox7.Text= g.getDuration().ToString();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            g.fillArray();
+            g.fillArrayList();
+            
+        }
+
+
     }
 }

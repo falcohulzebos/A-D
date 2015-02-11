@@ -11,62 +11,106 @@ namespace Grades
     {
         private Object thisLock = new Object();
         int[,] grades = new int [,] { { 10, 20, 30, 40 }, { 50, 60, 70, 80 } };
-        int[] singleGrades = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90 };
+        int[] singleGrades = new int[10000];
         ArrayList AGrades = new ArrayList();
         QueryPerfCounter Q = new QueryPerfCounter();
+        private double duration;
+        
 
-        public GradeFormClass()
+
+        public void fillArray()
         {
-            fillArrayList();
+
+
+            for (int i = 1; i < 5;  i++)
+                {
+                    for (int a = 0; a < 100; a++)
+                    {
+
+                        singleGrades[i] = a;
+                        Console.WriteLine(i + " - - - " + a + " - - - " + "fillarray");
+
+                    }
+                }
+            
+
         }
 
-        private void fillArrayList()
+        public void fillArrayList()
         {
-            for (int i = 10; i < 100; i = i + 10)
-            {
-                AGrades.Add(i);
+
+           
+                for (int i = 0; i < 5;  i++)
+                {
+                    for (int a = 0; a < 100; a++)
+                    {
+                        AGrades.Add(a);
+                        Console.WriteLine(i + " - - - " + a + " - - - " + "fillarraylist");
+                    }
+                
             }
-
         }
+
+       
 
         public string max()
         {
             int max = 0;
-            for (int i = 0; i < singleGrades.Length; i++)
+            lock (thisLock)
             {
-                if(singleGrades[i]> max)
+                Q.Start();
+                for (int i = 0; i < singleGrades.Length; i++)
                 {
-                    max = singleGrades[i];
+                    if (singleGrades[i] > max)
+                    {
+                        max = singleGrades[i];
+                    }
                 }
+                Q.Stop();
             }
+          duration = Q.Duration(1);
                 return "max: " + max;
         }
 
         public string min()
         {
             int min = 1111;
-            for (int i = 0; i < singleGrades.Length; i++)
+            lock (thisLock)
             {
-                if (singleGrades[i] < min)
+                Q.Start();
+                for (int i = 0; i < singleGrades.Length; i++)
                 {
-                    min = singleGrades[i];
+                    if (singleGrades[i] < min)
+                    {
+                        min = singleGrades[i];
+                    }
                 }
+                Q.Stop();
             }
+            duration = Q.Duration(1);
             return "min: " + min;
         }
 
         public string average()
         {
             int temp = 0;
-            int average = 0;
-            for (int i = 0; i < singleGrades.Length; i++)
+            double average = 0;
+            lock (thisLock)
             {
-                
-                
+                Q.Start();
+                for (int i = 0; i < singleGrades.Length; i++)
+                {
+
+
                     temp += singleGrades[i];
-                
+
+                }
+                average = temp / singleGrades.Length;
+                Console.WriteLine(temp);
+                Console.WriteLine(singleGrades.Length);
+                Q.Stop();
             }
-            average = temp / singleGrades.Length;
+            duration = Q.Duration(1);
             return "average: " + average;
         }
 
@@ -154,12 +198,66 @@ namespace Grades
 
         public string AMax()
         {
-
+            int max = 0;
+            lock (thisLock)
+            {
+                Q.Start();
+                foreach (int i in AGrades)
+                {
+                    if (i > max)
+                    {
+                        max = i;
+                    }
+                }
+                Q.Stop();
+            }
+            duration = Q.Duration(1);
+            return "max: " + max;
         }
 
         public string AMin()
         {
+            int min = 1000;
+            lock (thisLock)
+            {
+                Q.Start();
+                foreach (int i in AGrades)
+                {
+                    if (i < min)
+                    {
+                        min = i;
+                    }
+                }
+                Q.Stop();
+            }
+            duration = Q.Duration(1);
+            return "min: " + min;
+        }
 
+        public string AAverage()
+        {
+            int temp = 0;
+            double average = 0;
+            lock (thisLock)
+            {
+                Q.Start();
+                foreach (int i in AGrades)
+                {
+
+                    temp += i;
+
+                }
+                average = temp / AGrades.Count;
+                Q.Stop();
+            }
+            duration = Q.Duration(1);
+            return "average: " + average;
+
+        }
+
+        public double getDuration()
+        {
+            return duration;
         }
 
     }
