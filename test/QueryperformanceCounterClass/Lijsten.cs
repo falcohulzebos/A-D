@@ -8,6 +8,7 @@ namespace QueryperformanceCounterClass
 {
     class Lijsten
     {
+        
         private Object thisLock = new Object();
         QueryPerfCounter Q = new QueryPerfCounter();
         int[] numbers = new int[1000000];
@@ -42,7 +43,7 @@ namespace QueryperformanceCounterClass
                 Q.Stop();
             }
 
-            return Q.Duration(1);
+            return Q.Duration(2);
 
         }
     }
