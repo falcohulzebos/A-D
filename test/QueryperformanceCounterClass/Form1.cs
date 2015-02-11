@@ -24,6 +24,8 @@ namespace QueryperformanceCounterClass
             double duration;
 
             duration = ids.FillCollection();
+            duration = duration / 1000;
+            duration = Math.Round(duration, 0);
             textBox2.Text = duration.ToString();
         }
 
@@ -32,6 +34,8 @@ namespace QueryperformanceCounterClass
             double duration;
             
             duration = arrays.FillArray();
+            duration = duration/1000;
+            duration = Math.Round(duration, 0);
             textBox1.Text = duration.ToString();
             
         }
