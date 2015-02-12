@@ -36,7 +36,7 @@ namespace ArrayListClass
         //Insert an item
         public void Add()
         {
-            ItemList.Insert();
+            
         }
 
     }
