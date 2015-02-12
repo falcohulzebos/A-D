@@ -26,7 +26,15 @@ namespace ArrayListClass
 
         public void Add(T value)
         {
-            myArray[counter] = value;
+            if(counter == myArray.Length)
+            {
+                ResizeArray();
+                
+            }
+            if (counter < myArray.Length)
+            {
+                myArray[counter] = value;
+            }
         }
     }
 }
