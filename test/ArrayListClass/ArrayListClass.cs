@@ -6,18 +6,27 @@ using System.Threading.Tasks;
 
 namespace ArrayListClass
 {
-    class ArrayListClass
+    class ArrayListClass<T>
     {
+        
+        
+        private int counter = 0;
+        T[] myArray = new T[16];
+
         static void main()
         {
-            int[] myArray = new int[2];
-            myArray[0] = 1;
-            myArray[1] = 2;
+            
         }
 
+      
         public void ResizeArray()
         {
-            myArray.Resize();
+            Array.Resize(ref myArray, myArray.Length + 16);
+        }
+
+        public void Add(T value)
+        {
+            myArray[counter] = value;
         }
     }
 }
