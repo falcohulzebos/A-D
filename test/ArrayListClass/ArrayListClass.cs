@@ -1,22 +1,20 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayListClass
+namespace ArrayListClass 
 {
-    class ArrayListClass<T>
+    class ArrayListClass<T> : IEnumerable
     {
 
 
-        private int counter = 0;
+        private int count = 0;
         T[] myArray = new T[16];
 
-        static void main()
-        {
-
-        }
+      
 
 
         public void ResizeArray()
@@ -26,16 +24,48 @@ namespace ArrayListClass
 
         public void Add(T value)
         {
-            if(counter == myArray.Length)
+            if(count == myArray.Length)
             {
                 ResizeArray();
                 
             }
-            if (counter < myArray.Length)
+            if (count < myArray.Length)
             {
-                myArray[counter] = value;
+                myArray[count] = value;
             }
         }
+
+        public void removeAt(int value)
+        {
+            var foos = new List<T>(myArray);
+            foos.RemoveAt(value);
+            myArray = foos.ToArray();
+            count--;
+        }
+
+        public void remove(T value)
+        {
+            int index = Array.IndexOf(myArray, value);
+            removeAt(index);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }
+
+        public Enum GetEnumerator()
+        {
+            return new Enum(myArray);
+        }
+        
+
+    }
+    class Enum : IEnumerator
+    {
+
+
+
     }
 }
 
