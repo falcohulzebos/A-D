@@ -51,27 +51,40 @@ namespace CArray
                 Console.WriteLine("Before sorting: ");
                 nums.DisplayElements();
                 Console.WriteLine("During sorting: ");
-                nums.bubbleSort();
+                nums.BubbleSort();
                 Console.WriteLine("After sorting: ");
                 nums.DisplayElements();
             }
         }
-        
-        public void bubbleSort()
+
+        public static void BubbleSort<T>(this T[] arr) where T : IComparable<T>
         {
-            int temp;
-            for(int outer = upper; outer >=1; outer++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                for(int inner = 0; inner <= outer - 1; inner++)
+                for (int j = 0; j < arr.Length - 1; j++)
                 {
-                    if((int)arr[inner] > arr[inner + 1])
+                    if (arr[j].CompareTo(arr[j + 1]) > 0)
+                        swap(arr[j], arr[j + 1]);
+                }
+            }
+        }
+
+        public void selectionSort()
+        {
+            int min, temp;
+            for(int outer = 0; outer <= upper; outer++)
+            {
+                min = outer;
+                for (int inner = inner = outer + 1; inner <= upper; inner++)
+                {
+                    if(arr[inner] < arr[min])
                     {
-                        temp = arr[inner];
-                        arr[inner] = arr[inner + 1];
-                        arr[inner + 1] = temp;
+                        min = inner;
+                        temp = arr[outer];
+                        arr[outer] = arr[min];
+                        arr[min] = temp;
                     }
                 }
-                this.DisplayElements();
             }
         }
     }

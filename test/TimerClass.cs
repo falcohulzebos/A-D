@@ -3,7 +3,7 @@
 /// <summary>
 /// Summary description for Class1
 /// </summary>
-public class Timing
+public class Timing<T>
 {
     TimeSpan startingTime;
     TimeSpan duration;

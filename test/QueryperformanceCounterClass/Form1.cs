@@ -14,6 +14,7 @@ namespace QueryperformanceCounterClass
     {
         Lijsten ids = new Lijsten();
         Lijsten arrays = new Lijsten();
+        String output;
         public Form1()
         {
             InitializeComponent();
@@ -22,22 +23,30 @@ namespace QueryperformanceCounterClass
         private void button2_Click(object sender, EventArgs e)
         {
             double duration;
-
-            duration = ids.FillCollection();
+            for (int i = 0; i < 5; i++)
+            { 
+                duration = ids.FillCollection();
             duration = duration / 1000;
             duration = Math.Round(duration, 0);
-            textBox2.Text = duration.ToString();
-        }
+            output += duration.ToString() + "\r\n";
+            }
+            textBox2.Text = output;
+            output = "";
+            }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             double duration;
-            
-            duration = arrays.FillArray();
-            duration = duration/1000;
-            duration = Math.Round(duration, 0);
-            textBox1.Text = duration.ToString();
-            
+            for (int i = 0; i < 5; i++)
+            {
+                duration = arrays.FillArray();
+                duration = duration / 1000;
+                duration = Math.Round(duration, 0);
+                output += duration.ToString() + "\r\n";
+            }
+            textBox1.Text = output;
+            output = "";
         }
     }
 }
