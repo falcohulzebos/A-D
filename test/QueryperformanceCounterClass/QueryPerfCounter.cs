@@ -28,6 +28,8 @@ namespace QueryperformanceCounterClass
 
         public void Start()
         {
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
             QueryPerformanceCounter(out start);
         }
 
