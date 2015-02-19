@@ -20,14 +20,14 @@ namespace Grades
 
         public void fillArray()
         {
+            int k = 0;
 
-
-            for (int i = 1; i < 5;  i++)
+            for (int i = 0; i < 5;  i++)
                 {
                     for (int a = 0; a < 100; a++)
                     {
-
-                        singleGrades[i] = a;
+                        singleGrades[k] = a;
+                        k++;
                         Console.WriteLine(i + " - - - " + a + " - - - " + "fillarray");
 
                     }
@@ -101,8 +101,7 @@ namespace Grades
                 for (int i = 0; i < singleGrades.Count(); i++)
                 {
 
-
-                    temp = temp + singleGrades[i];
+                    temp += singleGrades[i];
                    
                 }
                 average = temp / singleGrades.Count();

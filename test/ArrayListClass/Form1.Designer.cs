@@ -34,28 +34,32 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(106, 12);
+            this.button1.Location = new System.Drawing.Point(32, 58);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 34);
+            this.button1.Size = new System.Drawing.Size(69, 28);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
+            this.button1.Text = "test";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(296, 12);
+            this.textBox1.Location = new System.Drawing.Point(419, 11);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 330);
+            this.textBox1.Size = new System.Drawing.Size(10, 10);
             this.textBox1.TabIndex = 1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 354);
+            this.ClientSize = new System.Drawing.Size(440, 288);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

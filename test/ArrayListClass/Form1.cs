@@ -13,7 +13,8 @@ namespace ArrayListClass
 {
     public partial class Form1 : Form
     {
-        ArrayList ItemList = new ArrayList();
+        ArrayListClass<int> array = new ArrayListClass<int>();
+
         public Form1()
         {
             InitializeComponent();
@@ -21,23 +22,21 @@ namespace ArrayListClass
         
         public void Form1_Load(object sender, EventArgs e)
         {
-            int i = 0;
-            ItemList.Add("item4");
-            ItemList.Add("Item5");
-            ItemList.Add("Item2");
-            ItemList.Add("Item1");
-            ItemList.Add("Item3");
-            for (i = 0; i <= ItemList.Count - 1; i++)
-            {
-                textBox1.Text = ItemList[i].ToString();
-            }
+            
         }
 
-        //Insert an item
-        public void Add()
+        private void button1_Click(object sender, EventArgs e)
         {
-            ItemList.Insert();
+            for(int i = 0; i < 10 ; i++)
+            {
+                array.Add(i);
+            }
+
+            
+            
         }
 
+
+       
     }
 }
