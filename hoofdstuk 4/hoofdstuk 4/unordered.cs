@@ -9,10 +9,11 @@ namespace hoofdstuk_4
 {
     public class unorderedBinsearch
     {
+        public ArrayList Lijst = new ArrayList();
+        Random rnd = new Random(100);
         public unorderedBinsearch()
         {
-            ArrayList Lijst = new ArrayList();
-            Random rnd = new Random(100);  
+              
         }
         
         public void FillArray()
@@ -27,12 +28,20 @@ namespace hoofdstuk_4
         }
         static int binSearch(int value)
         {
+            unorderedBinsearch u = new unorderedBinsearch();
+
             int upperBound, lowerBound, mid;
-            upperBound = Lijst.Length - 1;
+            upperBound = u.Lijst.Count;
             lowerBound = 0;
             while(lowerBound <= upperBound)
             {
                 mid = (upperBound + lowerBound) / 2;
+
+                if(u.Lijst[mid] ==  value)
+                {
+                    return mid;
+                }
+
             }
         }
             
