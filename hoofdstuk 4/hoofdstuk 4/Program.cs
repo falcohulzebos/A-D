@@ -10,14 +10,17 @@ namespace hoofdstuk_4
     {
         public int[] arr = new int[100];
         Random rnd = new Random();
-        SearchClass s = new SearchClass();
+        SearchClass<int> s = new SearchClass<int>();
+        
 
         static void Main(string[] args)
         {
+            
             Program p = new Program();
             
             p.fillArray();
             p.searchMethodsTest();
+            p.unorderedBinaryTest();
             Console.ReadLine();
             
         }
@@ -37,5 +40,9 @@ namespace hoofdstuk_4
             Console.WriteLine("sequential search value 4: \r\n " + s.seqLast(arr, 4));
         }
 
+        public void unorderedBinaryTest()
+        {
+            Console.WriteLine("unordered binarysearch value 5: " + unorderedBinsearch.binSearch(5));  
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace hoofdstuk_4
 {
     public class unorderedBinsearch
     {
-        public ArrayList Lijst = new ArrayList();
+        public int[] Lijst = new int[100];
         Random rnd = new Random(100);
         public unorderedBinsearch()
         {
@@ -18,31 +18,40 @@ namespace hoofdstuk_4
         
         public void FillArray()
         {
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < Lijst.Length; i++)
             {
-                Lijst.Add(rnd.Next(100));
+                Lijst[i] = rnd.Next(100);
 
             }
             Console.Write(Lijst);
 
         }
-        static int binSearch(int value)
+        public static int binSearch(int value)
         {
             unorderedBinsearch u = new unorderedBinsearch();
-
+            u.FillArray();
             int upperBound, lowerBound, mid;
-            upperBound = u.Lijst.Count;
+            upperBound = u.Lijst.Length;
             lowerBound = 0;
             while(lowerBound <= upperBound)
             {
                 mid = (upperBound + lowerBound) / 2;
 
-                if(u.Lijst[mid] ==  value)
+                if(u.Lijst[mid]==  value)
                 {
                     return mid;
                 }
+                else if (value < u.Lijst[mid])
+                {
+                    upperBound = mid - 1;
+                }
+                else
+                {
+                    lowerBound = mid + 1;
+                }
 
             }
+            return -1;
         }
             
 

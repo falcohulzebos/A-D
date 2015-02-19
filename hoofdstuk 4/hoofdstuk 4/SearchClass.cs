@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace hoofdstuk_4
 {
-    class SearchClass
+    class SearchClass<T>
     {
-        public string seqSearch(int[] arr, int value, int occurance)
+        public string seqSearch(T[] arr, T value, int occurance)
         {
-            int theValue = -1;
+            T theValue = default(T);
             int occuranceCounter = 0;
             Boolean notFinished = true;
             int i;
             for (i = 0; i < arr.Length - 1 & notFinished == true; i++)
             {
-                if (arr[i] == value)
+                if (arr[i].Equals(value))
                 {
                     occuranceCounter++;
 
@@ -30,13 +30,14 @@ namespace hoofdstuk_4
             return "value: " + theValue + " index: "+ (i-1) ;
         }
 
-        public string seqLast(int[] arr, int value)
+        public string seqLast(T[] arr, int value)
         {
-            int theValue = -1, i, theIndex = 0;
+            T theValue = default(T);
+            int i, theIndex = 0;
 
             for (i = 0; i < arr.Length - 1  ; i++)
             {
-                if (arr[i] == value)
+                if (arr[i].Equals(value))
                 {
 
                     theIndex = i;
