@@ -8,11 +8,12 @@ namespace hoofdstuk_4
 {
     class SearchClass
     {
-        public int seqSearch(int[] arr, int value, int occurance)
+        public string seqSearch(int[] arr, int value, int occurance)
         {
             int theValue = -1;
             int occuranceCounter = 0;
-            for (int i = 0; i < arr.Length - 1; i++)
+            int i;
+            for (i = 0; i < arr.Length - 1; i++)
             {
                 if (arr[i] == value)
                 {
@@ -23,14 +24,15 @@ namespace hoofdstuk_4
                     }
                 }
             }
-            return theValue;
+            return "value: " + theValue + " index: "+ i ;
         }
 
-        public int seqLast(int[] arr, int value)
+        public string seqLast(int[] arr, int value)
         {
             int theValue = -1;
             int occurranceCounter = 0;
-            for (int i = 0; i < arr.Length - 1; i++)
+            int i;
+            for (i = 0; i < arr.Length - 1; i++)
             {
                 if (arr[i] == value)
                 {
@@ -41,7 +43,7 @@ namespace hoofdstuk_4
                     }
                 }
             }
-            return theValue;
+            return "value: " + theValue + " index: " + i;
         }
 
     }
