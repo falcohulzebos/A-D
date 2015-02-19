@@ -8,6 +8,18 @@ public class unorderedBinsearch
 	public unorderedBinsearch()
 	{
         ArrayList Lijst = new ArrayList();
-        Random rnd = Random
+        Random rnd = new Random(100);
 	}
+
+    public void FillArray()
+    {
+        for(int i = 0; i<100; i++)
+        {
+            Lijst.Insert(rnd.Next(100));
+            
+        }
+       
+    }
+
+    
 }
