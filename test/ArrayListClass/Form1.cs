@@ -32,7 +32,10 @@ namespace ArrayListClass
                 array.Add(i);
             }
 
-            
+            foreach(int i in array)
+            {
+
+            }
             
         }
 
