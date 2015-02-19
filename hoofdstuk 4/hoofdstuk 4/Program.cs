@@ -10,15 +10,16 @@ namespace hoofdstuk_4
     {
         public int[] arr = new int[100];
         Random rnd = new Random();
+        SearchClass s = new SearchClass();
 
         static void Main(string[] args)
         {
             Program p = new Program();
-            SearchClass s = new SearchClass();
+            
             p.fillArray();
-            Console.WriteLine("sequential search value 4 occurance 2: \r\n "+ s.seqSearch(p.arr, 4 , 2));
-            Console.WriteLine("sequential search value 4: \r\n "+ s.seqLast(p.arr, 4));
+            p.searchMethodsTest();
             Console.ReadLine();
+            
         }
 
         public void fillArray()
@@ -28,6 +29,12 @@ namespace hoofdstuk_4
                 arr[i] = rnd.Next(8);
                 Console.WriteLine("index: "+ i + "value: " +arr[i]);
             }
+        }
+
+        public void searchMethodsTest()
+        {
+            Console.WriteLine("sequential search value 4 occurance 2: \r\n " + s.seqSearch(arr, 4, 2));
+            Console.WriteLine("sequential search value 4: \r\n " + s.seqLast(arr, 4));
         }
 
     }
