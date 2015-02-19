@@ -4,16 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SortingMethods
-{ 
-   
-    class H3_Sorting
+namespace hoofdstuk_4
+{
+    class SearchClass
     {
-        
-
-        static void main()
-        {
-
-        }
     }
 }
