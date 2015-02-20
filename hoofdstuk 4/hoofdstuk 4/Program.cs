@@ -17,10 +17,13 @@ namespace hoofdstuk_4
         {
             
             Program p = new Program();
-            
             p.fillArray();
-            p.searchMethodsTest();
-            p.unorderedBinaryTest();
+            Console.WriteLine("1: searchmethodstest \r\n 2: unorderedbinarytest \r\n 3: CArray");
+            if (Console.ReadLine() == "1") { p.searchMethodsTest(); }
+            if (Console.ReadLine() == "2") { p.unorderedBinaryTest(); }
+            if (Console.ReadLine() == "3") { p.cArrayTests(); }
+            
+
             Console.ReadLine();
             
         }
@@ -43,6 +46,11 @@ namespace hoofdstuk_4
         public void unorderedBinaryTest()
         {
             Console.WriteLine("unordered binarysearch value 5: " + unorderedBinsearch.binSearch(5));  
+        }
+
+        public void cArrayTests()
+        {
+            
         }
     }
 }
