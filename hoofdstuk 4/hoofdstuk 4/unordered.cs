@@ -9,13 +9,14 @@ namespace hoofdstuk_4
 {
     public class unorderedBinsearch
     {
+        //initialiseren van de lijst en de random.
         public int[] Lijst = new int[100];
         Random rnd = new Random(100);
         public unorderedBinsearch()
         {
               
         }
-        
+        //lijst vullen met de integers.
         public void FillArray()
         {
             for (int i = 0; i < Lijst.Length; i++)
@@ -26,6 +27,7 @@ namespace hoofdstuk_4
             Console.Write(Lijst);
 
         }
+        //de functie voor het binair zoeken
         public static int binSearch(int value)
         {
             unorderedBinsearch u = new unorderedBinsearch();

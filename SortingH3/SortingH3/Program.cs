@@ -80,5 +80,42 @@ namespace SortingH3
                 
             }
 
+            public void SelectionSort()
+            {
+                int min, temp;
+
+                for (int outer = 0; outer <= upper; outer++)
+                {
+                    min = outer;
+
+                    for (int inner = outer + 1; inner <= upper; inner++)
+                        if (arr[inner] < arr[min])
+                            min = inner;
+
+                    temp = arr[outer];
+                    arr[outer] = arr[min];
+                    arr[min] = temp;
+
+                }
+
+            }
+
+            public void InsertionSort()
+            {
+                int inner, temp;
+
+                for (int outer = 1; outer <= upper; outer++)
+                {
+                    temp = arr[outer];
+                    inner = outer;
+
+                    while (inner > 0 && arr[inner - 1] >= temp)
+                    {
+                        arr[inner] = arr[inner - 1];
+                        inner -= 1;
+                    }
+                    arr[inner] = temp;
+                }
+            }
    }
 }
