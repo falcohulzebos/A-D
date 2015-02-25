@@ -20,15 +20,9 @@ namespace Hoofdstuk_7
             {
                 first = word.Substring(0, 1);
                 last = word.Substring(1, word.Length - 1);
-                bool isVowel = "aeiouAEIOU".IndexOf(first) >= 0;
-                if (isVowel)
-                {
-                    pig += word + "way" + SPACE;
-                }
-                else
-                {
-                    pig += last + first + "ay" + SPACE;
-                }
+
+                pig += last + first + "ay" + SPACE;
+
             }
             Console.WriteLine(pig);
             Console.ReadKey();
