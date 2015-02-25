@@ -14,8 +14,8 @@ namespace Hoofdstuk_7
             string pig = "";
             string first;
             string last;
-            string txtEnglish = "This is a piglatin generator";
-            string[] words = txtEnglish.Split(' ');
+            string txt = "Dit is een piglatin generator";
+            string[] words = txt.Split(' ');
             foreach (string word in words)
             {
                 first = word.Substring(0, 1);
