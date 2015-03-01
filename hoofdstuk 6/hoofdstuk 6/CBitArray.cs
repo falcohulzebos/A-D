@@ -14,13 +14,17 @@ namespace hoofdstuk_6
 
         public CBitArray(Boolean[] a)
         {
+            BArray = new BitArray(a.Length);
             boolArray = new Boolean[a.Length];
             boolArray = a;
         }
 
         public void toBArray(Boolean[] b)
         {
-            int position = 0;
+            for(int i = 0; i< b.Length; i++)
+            {
+                BArray.Set(i, b[i]);
+            }
             
         }
 
