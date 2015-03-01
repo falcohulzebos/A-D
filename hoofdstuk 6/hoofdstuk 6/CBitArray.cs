@@ -17,6 +17,7 @@ namespace hoofdstuk_6
             BArray = new BitArray(a.Length);
             boolArray = new Boolean[a.Length];
             boolArray = a;
+            toBArray(a);
         }
 
         public void toBArray(Boolean[] b)
