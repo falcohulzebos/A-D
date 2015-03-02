@@ -59,25 +59,27 @@ namespace hoofdstuk_6
             BArray.Set(index, value);
         }
 
-        public int lenght()
-        {
+        public int Length()
+        { 
             return BArray.Length;
         }
 
-        public void not(CBitArray b)
+        public void not()
         {
-            for(int i = 0; i< b.lenght(); i++)
+            for (int i = 0; i < BArray.Length; i++)
             {
-                if(b.get(i) == 0)
+                if (BArray.Get(i) == false)
                 {
-                    b.set(i, true);
+                    BArray.Set(i, true);
                 }
-                if (b.get(i) == 1)
+                if (BArray.Get(i) == true)
                 {
-                    b.set(i, false);
+                    BArray.Set(i, false);
                 }
             }
         }
+
+
         
 
 
