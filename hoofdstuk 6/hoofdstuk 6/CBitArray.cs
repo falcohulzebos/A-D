@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace hoofdstuk_6
 {
-    class CBitArray
+    class CBitArray 
     {
         BitArray BArray;
         Boolean[] boolArray;
