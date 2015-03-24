@@ -21,9 +21,10 @@ namespace quickSort
             string[] unsorted = { "z", "e", "x", "c", "m", "q", "a" };
            
             // Print the unsorted array
+            Console.WriteLine("unsorted list");
             for (int i = 0; i < unsorted.Length; i++)
             {
-                Console.Write(unsorted[i] + " ");
+                Console.WriteLine(unsorted[i] + " ");
             }
 
             Console.WriteLine();
@@ -32,9 +33,11 @@ namespace quickSort
             CQuicksort.Quicksort(unsorted, 0 , unsorted.Length-1);
 
             // Print the sorted array
+            Console.WriteLine();
+            Console.WriteLine("sorted list");
             for (int i = 0; i < unsorted.Length; i++)
             {
-                Console.Write(unsorted[i] + " ");
+                Console.WriteLine(unsorted[i]);
             }
 
             Console.WriteLine();

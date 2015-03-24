@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
-    <Compile Include="Hoofdstuk 1\oefeningen\Swap.cs" />
+    <Compile Include="Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
     <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\Test.cs" />
@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Hoofdstuk 2\GradeTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sotringAlgoritmes\BubbleSort.cs" />
+    <Compile Include="sotringAlgoritmes\InsertionSort.cs" />
+    <Compile Include="sotringAlgoritmes\SmartBubbleSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hoofdstuk 3\" />
