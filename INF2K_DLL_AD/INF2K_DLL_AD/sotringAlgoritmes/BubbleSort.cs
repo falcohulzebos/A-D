@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace INF2K_DLL_AD.sotringAlgoritmes
 {
-    class BubbleSort
+    static class BubbleSort
     {
-        public static void BubbleSort<T>(this T[] arr) where T : IComparable<T>
+        
+
+        public static void Sort<T>(this T[] arr) where T : IComparable<T>
         {
             for (int i = 0; i < arr.Length; i++)
             {

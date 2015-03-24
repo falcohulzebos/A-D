@@ -6,25 +6,19 @@ using System.Threading.Tasks;
 
 namespace INF2K_DLL_AD.sotringAlgoritmes
 {
-    class InsertionSort<T>
+    static class InsertionSort
     {
-
-
-
-        public static void InsertionSort<T>(this T[] arr) where T : IComparable<T>
+        public static void Sort<T>(this T[] arr) where T : IComparable<T>
         {
-              
-             int upper;
-            
             int inner;
             T temp;
 
-            for (int outer = 1; outer <= upper; outer++)
+            for (int outer = 1; outer <= arr.Length - 1; outer++)
             {
                 temp = arr[outer];
                 inner = outer;
 
-                while (inner > 0 && arr[inner - 1].CompareTo(temp) >0)
+                while (inner > 0 && arr[inner - 1].CompareTo(temp) > 0)
                 {
                     arr[inner] = arr[inner - 1];
                     inner -= 1;
