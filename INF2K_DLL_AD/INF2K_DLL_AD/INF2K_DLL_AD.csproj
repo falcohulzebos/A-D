@@ -42,10 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayListClass.cs" />
     <Compile Include="CArray.cs" />
-    <Compile Include="Hashing\Hashing.cs" />
-    <Compile Include="Hashing\LinearHash2.cs" />
-    <Compile Include="Hashing\QuadraticHash.cs" />
+    <Compile Include="CPriorityQueue.cs" />
+    <Compile Include="CQueue.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
     <Compile Include="TimerClass.cs" />
@@ -68,13 +68,18 @@
       <DependentUpon>GradesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Hoofdstuk 2\GradeTracker.cs" />
+    <Compile Include="Hoofdstuk 3\SortingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 3\SortingForm.Designer.cs">
+      <DependentUpon>SortingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sotring\BubbleSort.cs" />
-    <Compile Include="sotring\InsertionSort.cs" />
-    <Compile Include="sotring\SmartBubbleSort.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\InsertionSort.cs" />
+    <Compile Include="Sorting\SmartBubbleSort.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Hoofdstuk 3\" />
     <Folder Include="Hoofdstuk 4\" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hoofdstuk 2\GradesForm.resx">
       <DependentUpon>GradesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoofdstuk 3\SortingForm.resx">
+      <DependentUpon>SortingForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
