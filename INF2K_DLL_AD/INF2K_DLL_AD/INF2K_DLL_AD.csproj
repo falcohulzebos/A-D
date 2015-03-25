@@ -46,6 +46,9 @@
     <Compile Include="CArray.cs" />
     <Compile Include="CPriorityQueue.cs" />
     <Compile Include="CQueue.cs" />
+    <Compile Include="HAshing2\Hashing.cs" />
+    <Compile Include="HAshing2\LinearHash2.cs" />
+    <Compile Include="HAshing2\QuadraticHash.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
     <Compile Include="TimerClass.cs" />
