@@ -61,9 +61,7 @@ namespace SortingH3
             public void BubbleSort()
             {
                 int temp;
-                
-                
-                
+
                     for (int outer = upper; outer >= 1; outer--)
                     {
                         for (int inner = 0; inner <= outer - 1; inner++)
@@ -74,10 +72,8 @@ namespace SortingH3
                                 arr[inner] = arr[inner + 1];
                                 arr[inner + 1] = temp;
                             }
-                        }
-                        
+                        }   
                     }
-                
             }
 
             public void SelectionSort()
