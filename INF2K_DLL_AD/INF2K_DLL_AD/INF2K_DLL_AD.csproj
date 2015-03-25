@@ -43,6 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CArray.cs" />
+    <Compile Include="Hashing\Hashing.cs" />
+    <Compile Include="Hashing\LinearHash2.cs" />
+    <Compile Include="Hashing\QuadraticHash.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
     <Compile Include="TimerClass.cs" />
