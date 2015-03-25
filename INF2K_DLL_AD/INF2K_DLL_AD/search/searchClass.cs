@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hoofdstuk_4
+namespace INF2K_DLL_AD.search
 {
-    class SearchClass<T>
+    class searchClass<T>
     {
-        public string seqSearch(T[] arr, T value, int occurance)
+        public T seqSearch(T[] arr, T value, int occurance)
         {
             T theValue = default(T);
             int occuranceCounter = 0;
@@ -27,25 +27,21 @@ namespace hoofdstuk_4
                     }
                 }
             }
-            return "value: " + theValue + " index: "+ (i-1) ;
+            return theValue;
         }
 
-        public string seqLast(T[] arr, T value)
+        public T Min(T[] arr)
         {
             T theValue = default(T);
-            int i, theIndex = 0;
-
-            for (i = 0; i < arr.Length - 1  ; i++)
+            for(int i = 0; i < arr.Length; i++)
             {
-                if (arr[i].Equals(value))
+                T temp = arr[i];
+                if(temp.ToString().CompareTo(theValue.ToString()) < 0)
                 {
-
-                    theIndex = i;
-                    theValue = arr[i];
-                  
+                    theValue = temp;
                 }
             }
-            return "value: " + theValue + " index: " + theIndex;
+            return theValue;
         }
 
         public T Max(T[] arr)
@@ -62,19 +58,36 @@ namespace hoofdstuk_4
             return theValue;
         }
 
-        public T Min(T[] arr)
+        //de functie voor het binair zoeken
+        public int binSearch(T[] arr, T value)
         {
-            T theValue = default(T);
-            for (int i = 0; i < arr.Length; i++)
+            
+           
+            int upperBound, lowerBound, mid;
+
+            upperBound = arr.Length;
+            lowerBound = 0;
+            while (lowerBound <= upperBound)
             {
-                T temp = arr[i];
-                if (temp.ToString().CompareTo(theValue.ToString()) < 0)
+                mid = (upperBound + lowerBound) / 2;
+
+                if (arr[mid].Equals(value))
                 {
-                    theValue = temp;
+                    return mid;
                 }
+                else if (value.ToString().CompareTo(arr[mid]) < 0)
+                {
+                    upperBound = mid - 1;
+                }
+                else
+                {
+                    lowerBound = mid + 1;
+                }
+
             }
-            return theValue;
+            return -1;
         }
 
     }
+
 }

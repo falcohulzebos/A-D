@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace INF2K_DLL_AD.sotringAlgoritmes
+namespace INF2K_DLL_AD.sotring
 {
     static class InsertionSort
     {
