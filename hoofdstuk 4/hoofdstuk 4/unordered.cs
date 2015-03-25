@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace hoofdstuk_4
 {
-    public class unorderedBinsearch
+    public class unorderedBinsearch<T>
     {
         //initialiseren van de lijst en de random.
         public int[] Lijst = new int[100];
@@ -28,22 +28,51 @@ namespace hoofdstuk_4
 
         }
         //de functie voor het binair zoeken
-        public static int binSearch(int value)
+        //public static int binSearch(int value)
+        //{
+        //    unorderedBinsearch u = new unorderedBinsearch();
+        //    u.FillArray();
+        //    int upperBound, lowerBound, mid;
+        //    upperBound = u.Lijst.Length;
+        //    lowerBound = 0;
+        //    while(lowerBound <= upperBound)
+        //    {
+        //        mid = (upperBound + lowerBound) / 2;
+
+        //        if(u.Lijst[mid]==  value)
+        //        {
+        //            return mid;
+        //        }
+        //        else if (value < u.Lijst[mid])
+        //        {
+        //            upperBound = mid - 1;
+        //        }
+        //        else
+        //        {
+        //            lowerBound = mid + 1;
+        //        }
+
+        //    }
+        //    return -1;
+        //}
+
+        public int binSearch(T[] arr, T value)
         {
-            unorderedBinsearch u = new unorderedBinsearch();
-            u.FillArray();
+
+
             int upperBound, lowerBound, mid;
-            upperBound = u.Lijst.Length;
+
+            upperBound = arr.Length;
             lowerBound = 0;
-            while(lowerBound <= upperBound)
+            while (lowerBound <= upperBound)
             {
                 mid = (upperBound + lowerBound) / 2;
 
-                if(u.Lijst[mid]==  value)
+                if (arr[mid].Equals(value))
                 {
                     return mid;
                 }
-                else if (value < u.Lijst[mid])
+                else if (value.ToString().CompareTo(arr[mid].ToString()) < 0)
                 {
                     upperBound = mid - 1;
                 }
