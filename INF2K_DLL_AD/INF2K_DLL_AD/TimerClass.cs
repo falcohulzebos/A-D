@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace INF2K_DLL_AD.Hoofdstuk_1.oefeningen
+namespace INF2K_DLL_AD
 {
     public class TimerClass
     {
