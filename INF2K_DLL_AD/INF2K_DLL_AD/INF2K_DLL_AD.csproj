@@ -45,6 +45,8 @@
     <Compile Include="CArray.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\TimerClass.cs" />
+    <Compile Include="QueryPerfCounter.cs" />
     <Compile Include="search\searchClass.cs" />
     <Compile Include="Swap.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
