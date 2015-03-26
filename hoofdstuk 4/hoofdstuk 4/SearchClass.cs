@@ -30,7 +30,7 @@ namespace hoofdstuk_4
             return "value: " + theValue + " index: "+ (i-1) ;
         }
 
-        public string seqLast(T[] arr, int value)
+        public string seqLast(T[] arr, T value)
         {
             T theValue = default(T);
             int i, theIndex = 0;
@@ -46,6 +46,34 @@ namespace hoofdstuk_4
                 }
             }
             return "value: " + theValue + " index: " + theIndex;
+        }
+
+        public T Max(T[] arr)
+        {
+            T theValue = default(T);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                T temp = arr[i];
+                if (temp.ToString().CompareTo(theValue.ToString()) > 0)
+                {
+                    theValue = temp;
+                }
+            }
+            return theValue;
+        }
+
+        public T Min(T[] arr)
+        {
+            T theValue = default(T);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                T temp = arr[i];
+                if (temp.ToString().CompareTo(theValue.ToString()) < 0)
+                {
+                    theValue = temp;
+                }
+            }
+            return theValue;
         }
 
     }

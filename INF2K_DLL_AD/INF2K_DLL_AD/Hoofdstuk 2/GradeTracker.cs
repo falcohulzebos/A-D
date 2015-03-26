@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
-using System.Array;
+
 
 namespace INF2K_DLL_AD.Hoofdstuk_2
 {

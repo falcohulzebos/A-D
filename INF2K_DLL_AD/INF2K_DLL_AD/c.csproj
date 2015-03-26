@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1FB28480-948F-4B25-9E01-50462D199559}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INF2K_DLL_AD</RootNamespace>
+    <AssemblyName>INF2K_DLL_AD</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayListClass.cs" />
+    <Compile Include="CArray.cs" />
+    <Compile Include="CPriorityQueue.cs" />
+    <Compile Include="CQueue.cs" />
+    <Compile Include="CStack.cs" />
+    <Compile Include="HAshing2\Hashing.cs" />
+    <Compile Include="HAshing2\LinearHash2.cs" />
+    <Compile Include="HAshing2\QuadraticHash.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
+    <Compile Include="TimerClass.cs" />
+    <Compile Include="QueryPerfCounter.cs" />
+    <Compile Include="search\searchClass.cs" />
+    <Compile Include="Swap.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\Collection.cs" />
+    <Compile Include="Hoofdstuk 1\oefeningen\Timer2.0.cs" />
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\Test.cs" />
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.Designer.cs">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoofdstuk 2\GradesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 2\GradesForm.Designer.cs">
+      <DependentUpon>GradesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hoofdstuk 2\GradeTracker.cs" />
+    <Compile Include="Hoofdstuk 3\SortingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoofdstuk 3\SortingForm.Designer.cs">
+      <DependentUpon>SortingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\InsertionSort.cs" />
+    <Compile Include="Sorting\SmartBubbleSort.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hoofdstuk 4\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Hoofdstuk 1\Opgaven\opgave 1\testForm.resx">
+      <DependentUpon>testForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoofdstuk 2\GradesForm.resx">
+      <DependentUpon>GradesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoofdstuk 3\SortingForm.resx">
+      <DependentUpon>SortingForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

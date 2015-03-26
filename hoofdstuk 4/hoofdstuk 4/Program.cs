@@ -17,10 +17,16 @@ namespace hoofdstuk_4
         {
             
             Program p = new Program();
-            
             p.fillArray();
-            p.searchMethodsTest();
-            p.unorderedBinaryTest();
+            Console.WriteLine("1: searchmethodstest \r\n 2: unorderedbinarytest \r\n 3: CArray");
+            if (Console.ReadLine() == "1") { p.searchMethodsTest(); }
+            if (Console.ReadLine() == "2") { p.unorderedBinaryTest(); }
+            if (Console.ReadLine() == "3") { p.cArrayTests(); }
+            if (Console.ReadLine() == "4") { p.getMin(); }
+            if (Console.ReadLine() == "5") { p.getMax(); }
+            
+            
+
             Console.ReadLine();
             
         }
@@ -42,7 +48,28 @@ namespace hoofdstuk_4
 
         public void unorderedBinaryTest()
         {
-            Console.WriteLine("unordered binarysearch value 5: " + unorderedBinsearch.binSearch(5));  
+            unorderedBinsearch<int> u = new unorderedBinsearch<int>();
+            Console.WriteLine("unordered binarysearch value 5: " + u.binSearch(arr,5));  
         }
+
+        public void cArrayTests()
+        {
+            
+        }
+
+        public void getMin()
+        {
+            Console.WriteLine("min value");
+            Console.WriteLine(s.Min(arr));
+        }
+
+        public void getMax()
+        {
+            Console.WriteLine("max value");
+            Console.WriteLine(s.Max(arr));
+
+        }
+
+
     }
 }
