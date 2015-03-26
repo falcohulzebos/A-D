@@ -46,6 +46,7 @@
     <Compile Include="CArray.cs" />
     <Compile Include="CPriorityQueue.cs" />
     <Compile Include="CQueue.cs" />
+    <Compile Include="CStack.cs" />
     <Compile Include="HAshing2\Hashing.cs" />
     <Compile Include="HAshing2\LinearHash2.cs" />
     <Compile Include="HAshing2\QuadraticHash.cs" />
