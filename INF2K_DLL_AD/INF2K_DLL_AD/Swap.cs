@@ -26,6 +26,8 @@ namespace INF2K_DLL_AD
             //Console.WriteLine("String 2: " + str2);
             //Console.ReadKey();
         }
+        
+        // swaps val1 with val2
         public static void Swap<T>(ref T val1, ref T val2)
         {
             T temp;

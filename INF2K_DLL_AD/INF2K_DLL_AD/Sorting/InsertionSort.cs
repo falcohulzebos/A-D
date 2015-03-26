@@ -8,6 +8,7 @@ namespace INF2K_DLL_AD.Sorting
 {
     static class InsertionSort
     {
+        // sorts a array with T values with a insertionsort algorithm
         public static void Sort<T>(this T[] arr) where T : IComparable<T>
         {
             int inner;

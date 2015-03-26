@@ -77,10 +77,12 @@ namespace INF2K_DLL_AD
             return returner;
         }
 
+        // item class with stored item and priority
         private class Item
         {
             T item;
             int priority;
+
 
             public Item(T item, int priority)
             {

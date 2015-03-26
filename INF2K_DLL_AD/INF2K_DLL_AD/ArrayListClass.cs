@@ -10,18 +10,19 @@ namespace ArrayListClass
     class ArrayListClass<T> : IEnumerable
     {
 
-
+        // counter and array
         private int count = 0;
         T[] myArray = new T[16];
 
       
 
-
+        // rezize the array with 16 extra spaces
         public void ResizeArray()
         {
             Array.Resize(ref myArray, myArray.Length + 16);
         }
 
+        // add value to arraylist
         public void Add(T value)
         {
             if(count == myArray.Length)
@@ -35,6 +36,7 @@ namespace ArrayListClass
             }
         }
 
+        // remove value from arraylist at specified index
         public void removeAt(int value)
         {
             var foos = new List<T>(myArray);
@@ -43,12 +45,14 @@ namespace ArrayListClass
             count--;
         }
 
+        // remove value from arraylist
         public void remove(T value)
         {
             int index = Array.IndexOf(myArray, value);
             removeAt(index);
         }
 
+        // foreach
         IEnumerator IEnumerable.GetEnumerator()
         {
             return (IEnumerator)GetEnumerator();

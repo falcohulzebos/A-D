@@ -8,6 +8,7 @@ namespace INF2K_DLL_AD.Sorting
 {
     static class BubbleSort
     {
+        // sorts an array of T values with a bubblesort algoritm
         public static void Sort<T>(this T[] arr) where T : IComparable<T>
         {
             for (int i = 0; i < arr.Length; i++)

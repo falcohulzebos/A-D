@@ -9,15 +9,18 @@ namespace INF2K_DLL_AD
 {
     public class TimerClass
     {
+        // timespans
         TimeSpan startingTime;
         TimeSpan duration;
 
+        // calls timerclass with initial values
         public TimerClass()
         {
             startingTime = new TimeSpan(0);
             duration = new TimeSpan(0);
         }
 
+        // stops mesuring time 
         public void stopTime()
         {
             Process p = Process.GetCurrentProcess();
@@ -26,6 +29,7 @@ namespace INF2K_DLL_AD
             duration = thread.UserProcessorTime.Subtract(startingTime);
         }
 
+        // starts mesuring time
         public void startTime()
         {
             GC.Collect();
@@ -36,6 +40,8 @@ namespace INF2K_DLL_AD
             startingTime = thread.UserProcessorTime;
             
         }
+
+        // retuns duration
         public TimeSpan result()
         {
             return duration;
