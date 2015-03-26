@@ -8,7 +8,7 @@ namespace INF2K_DLL_AD
 {
     class CStack<T>
     {
-         T[] stackArray;
+        T[] stackArray;
         int counter = 0;
         
         // constructors
