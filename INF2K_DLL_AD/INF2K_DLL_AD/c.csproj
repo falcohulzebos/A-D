@@ -42,7 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayListClass.cs" />
     <Compile Include="CArray.cs" />
+    <Compile Include="CPriorityQueue.cs" />
+    <Compile Include="CQueue.cs" />
+    <Compile Include="HAshing2\Hashing.cs" />
+    <Compile Include="HAshing2\LinearHash2.cs" />
+    <Compile Include="HAshing2\QuadraticHash.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
     <Compile Include="TimerClass.cs" />
@@ -72,9 +78,9 @@
       <DependentUpon>SortingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sotring\BubbleSort.cs" />
-    <Compile Include="sotring\InsertionSort.cs" />
-    <Compile Include="sotring\SmartBubbleSort.cs" />
+    <Compile Include="Sorting\BubbleSort.cs" />
+    <Compile Include="Sorting\InsertionSort.cs" />
+    <Compile Include="Sorting\SmartBubbleSort.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Hoofdstuk 4\" />
