@@ -25,6 +25,7 @@ namespace hoofdstuk_4
             if (Console.ReadLine() == "4") { p.getMin(); }
             if (Console.ReadLine() == "5") { p.getMax(); }
             
+            
 
             Console.ReadLine();
             

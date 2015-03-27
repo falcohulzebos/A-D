@@ -12,6 +12,7 @@ namespace CArray
         private int upper;
         private int numElements;
         
+        // new array
         public CArray(int size)
         {
             arr = new int[size];
@@ -19,12 +20,14 @@ namespace CArray
             numElements = 0;
         }
 
+        // insert item at end of array
         public void insert(int item)
         {
             arr[numElements] = item;
             numElements++;
         }
 
+        // writes elements to console
         public void DisplayElements()
         {
            for(int i = 0; i <= upper; i++)
@@ -33,6 +36,7 @@ namespace CArray
            }
         }
 
+        // clears array
         public void Clear()
         {
             for(int i = 0; i <= upper; i++)
