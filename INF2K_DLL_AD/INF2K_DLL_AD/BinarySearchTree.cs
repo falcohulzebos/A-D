@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace binarysearch
+namespace INF2K_DLL_AD
 {
     public class CNode<T>
     {

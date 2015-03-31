@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArrayListClass 
+namespace INF2K_DLL_AD 
 {
     class ArrayListClass<T> : IEnumerable
     {

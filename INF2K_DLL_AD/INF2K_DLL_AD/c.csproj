@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayListClass.cs" />
+    <Compile Include="BinarySearchTree.cs" />
     <Compile Include="CArray.cs" />
     <Compile Include="CPriorityQueue.cs" />
     <Compile Include="CQueue.cs" />
