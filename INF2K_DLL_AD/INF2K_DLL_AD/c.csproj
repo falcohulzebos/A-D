@@ -52,7 +52,9 @@
     <Compile Include="HAshing2\QuadraticHash.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\GenericCollection.cs" />
     <Compile Include="Hoofdstuk 1\oefeningen\Oversimplified Timing Test.cs" />
-    <Compile Include="Iterator + LinkedList\Program.cs" />
+    <Compile Include="LinkedList\LinkedList.cs" />
+    <Compile Include="LinkedList\ListIter.cs" />
+    <Compile Include="LinkedList\Node.cs" />
     <Compile Include="TimerClass.cs" />
     <Compile Include="QueryPerfCounter.cs" />
     <Compile Include="search\searchClass.cs" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Linked_List;
 
 namespace Iterator
 {
@@ -11,8 +12,8 @@ namespace Iterator
 
         static void Main()
         {
-            LinkedList MyList = new LinkedList();
-            ListIter iter = new ListIter(MyList);
+            CLinkedList<String> MyList = new CLinkedList<String>();
+            ListIter<String> iter = new ListIter<String>(MyList);
             string choice, value;
 
             try
@@ -119,129 +120,129 @@ namespace Iterator
             }
         }
 
-        public class Node
-        {
-            public Object Element;
-            public Node Link;
+        //public class Node
+        //{
+        //    public Object Element;
+        //    public Node Link;
 
-            public Node()
-            {
-                Element = null;
-                Link = null;
-            }
+        //    public Node()
+        //    {
+        //        Element = null;
+        //        Link = null;
+        //    }
 
-            public Node(Object theElement)
-            {
-                Element = theElement;
-                Link = null;
+        //    public Node(Object theElement)
+        //    {
+        //        Element = theElement;
+        //        Link = null;
 
-            }
-        }
+        //    }
+        //}
 
-        public class InsertBeforeHeaderException : System.ApplicationException
-        {
-            public InsertBeforeHeaderException(string message)
-                : base(message)
-            {
+        //public class InsertBeforeHeaderException : System.ApplicationException
+        //{
+        //    public InsertBeforeHeaderException(string message)
+        //        : base(message)
+        //    {
 
-            }
-        }
+        //    }
+        //}
 
-        public class LinkedList
-        {
-            private Node header;
+        //public class LinkedList
+        //{
+        //    private Node header;
 
-            public LinkedList()
-            {
-                header = new Node("header");
-            }
+        //    public LinkedList()
+        //    {
+        //        header = new Node("header");
+        //    }
 
-            public bool IsEmpty()
-            {
-                return (header.Link == null);
-            }
+        //    public bool IsEmpty()
+        //    {
+        //        return (header.Link == null);
+        //    }
 
-            public Node GetFirst()
-            {
-                return header;
-            }
+        //    public Node GetFirst()
+        //    {
+        //        return header;
+        //    }
 
-            public void ShowList()
-            {
-                Node current = header.Link;
+        //    public void ShowList()
+        //    {
+        //        Node current = header.Link;
 
-                while (!(current == null))
-                {
-                    Console.WriteLine(current.Element);
+        //        while (!(current == null))
+        //        {
+        //            Console.WriteLine(current.Element);
 
-                    current = current.Link;
-                }
-            }
-        }
-        public class ListIter
-        {
-            private Node current;
-            private Node previous;
+        //            current = current.Link;
+        //        }
+        //    }
+        //}
+        //public class ListIter
+        //{
+        //    private Node current;
+        //    private Node previous;
 
-            LinkedList theList;
+        //    LinkedList theList;
 
-            public ListIter(LinkedList list)
-            {
-                theList = list;
-                current = theList.GetFirst();
-                previous = null;
-            }
+        //    public ListIter(LinkedList list)
+        //    {
+        //        theList = list;
+        //        current = theList.GetFirst();
+        //        previous = null;
+        //    }
 
-            public void NextLink()
-            {
-                previous = current;
-                current = current.Link;
-            }
+        //    public void NextLink()
+        //    {
+        //        previous = current;
+        //        current = current.Link;
+        //    }
 
-            public Node GetCurrent()
-            {
-                return current;
-            }
+        //    public Node GetCurrent()
+        //    {
+        //        return current;
+        //    }
 
-            public void InsertBefore(Object theElement)
-            {
-                Node newNode = new Node(theElement);
+        //    public void InsertBefore(Object theElement)
+        //    {
+        //        Node newNode = new Node(theElement);
 
-                if (previous.Link == null)
-                {
-                    throw new InsertBeforeHeaderException("Can't insert here.");
-                }
-                else
-                {
-                    newNode.Link = previous.Link;
-                    previous.Link = newNode;
-                    current = newNode;
-                }
-            }
+        //        if (previous.Link == null)
+        //        {
+        //            throw new InsertBeforeHeaderException("Can't insert here.");
+        //        }
+        //        else
+        //        {
+        //            newNode.Link = previous.Link;
+        //            previous.Link = newNode;
+        //            current = newNode;
+        //        }
+        //    }
 
-            public void InsertAfter(Object theElement)
-            {
-                Node newNode = new Node(theElement);
-                newNode.Link = current.Link;
-                current.Link = newNode;
+        //    public void InsertAfter(Object theElement)
+        //    {
+        //        Node newNode = new Node(theElement);
+        //        newNode.Link = current.Link;
+        //        current.Link = newNode;
 
-            }
+        //    }
 
-            public void Remove()
-            {
-                previous.Link = current.Link;
-            }
+        //    public void Remove()
+        //    {
+        //        previous.Link = current.Link;
+        //    }
 
-            public void Reset()
-            {
-                current = theList.GetFirst();
-                previous = null;
-            }
+        //    public void Reset()
+        //    {
+        //        current = theList.GetFirst();
+        //        previous = null;
+        //    }
 
-            public bool AtEnd()
-            {
-                return (current.Link == null);
-            }
-        }
+        //    public bool AtEnd()
+        //    {
+        //        return (current.Link == null);
+        //    }
+        //}
     }
 }
