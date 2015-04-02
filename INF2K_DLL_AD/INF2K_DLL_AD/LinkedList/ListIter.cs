@@ -13,6 +13,8 @@ namespace INF2K_DLL_AD.LinkedList
 
         CLinkedList<T> theList;
 
+        // new iterator
+        // parameter list linkedlist for iterator
         public ListIter(CLinkedList<T> list)
         {
             theList = list;
@@ -20,17 +22,22 @@ namespace INF2K_DLL_AD.LinkedList
             previous = null;
         }
 
+        // goes to next node
+        // current node becomes previous
+        // next node becomes current node
         public void NextLink()
         {
             previous = current;
             current = current.Link;
         }
 
+        // returns current node
         public CNode<T> GetCurrent()
         {
             return current;
         }
 
+        // insert new node before current node
         public void InsertBefore(T theElement)
         {
             CNode<T> newNode = new CNode<T>(theElement);
@@ -47,6 +54,7 @@ namespace INF2K_DLL_AD.LinkedList
             }
         }
 
+        // insert new node after current node 
         public void InsertAfter(T theElement)
         {
             CNode<T> newNode = new CNode<T>(theElement);
@@ -55,11 +63,13 @@ namespace INF2K_DLL_AD.LinkedList
 
         }
 
+        // remove node from linkedlist
         public void Remove()
         {
             previous.Link = current.Link;
         }
 
+        // resets iterator
         public void Reset()
         {
             current = theList.GetFirst();
@@ -72,6 +82,7 @@ namespace INF2K_DLL_AD.LinkedList
         }
     }
     
+    // exception class for handeling inserting before header
     public class InsertBeforeHeaderException : System.ApplicationException
     {
         public InsertBeforeHeaderException(string message)

@@ -15,6 +15,7 @@ namespace INF2K_DLL_AD.Sorting
             {
                 for (int j = 0; j < arr.Length - 1; j++)
                 {
+                    // check of de eerste value groter is dan de tweede, zo ja Swap
                     if (arr[j].CompareTo(arr[j + 1]) > 0)
                         INF2K_DLL_AD.SwapClass.Swap<T>(ref arr[j], ref arr[j + 1]);
                 }

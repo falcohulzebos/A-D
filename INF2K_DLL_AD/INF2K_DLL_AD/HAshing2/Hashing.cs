@@ -1,5 +1,5 @@
 ﻿using System;
-namespace INF2K_DLL_AD
+namespace INF2K_DLL_AD.HAshing2
 {
     public class Hashing
     {

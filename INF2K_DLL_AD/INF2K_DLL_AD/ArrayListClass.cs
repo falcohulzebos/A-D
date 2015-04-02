@@ -65,6 +65,8 @@ namespace INF2K_DLL_AD
         
 
     }
+
+    // IEnumerator class for foreach loop
     class MyEnum<T> : IEnumerator
     {
         

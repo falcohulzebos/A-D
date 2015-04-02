@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace INF2K_DLL_AD
 {
+    // single node class with data and corresponding left and right node
     public class CNode<T>
     {
+        
         public T data;
         public CNode<T> Left;
         public CNode<T> Right;
@@ -20,19 +22,24 @@ namespace INF2K_DLL_AD
 
     public class binarySearchTree<T>
     {
+        // root node
         public CNode<T> root;
-
+        
+        // new binarysearchtree
         public binarySearchTree()
         {
             root = null;
         }
 
+        // insert a value into the tree
         public void insert(T i) 
         {
+            // new node + data
             CNode<T> newNode = new CNode<T>();
             newNode.data = i;
             try
             {
+                // if there is not a root node yet, root node = new node
                 if (root == null)
                 {
                     root = newNode;
@@ -41,7 +48,8 @@ namespace INF2K_DLL_AD
                 {
                     CNode<T> current = root;
                     CNode<T> parrent;
-
+                    // check if new node should be left or right of parrent node, if new node value is lower then parrent, new node left
+                    // else new node right
                     while (true)
                     {
                         parrent = current;
@@ -74,13 +82,15 @@ namespace INF2K_DLL_AD
             }catch(Exception e){ }
         }
 
-        public CNode<T> Find(T key) 
+        // finds node with provided T data
+        public CNode<T> Find(T data) 
         {
             CNode<T> current = root;
-            while (!current.data.Equals(key))
+            // check if current node data equals data
+            while (!current.data.Equals(data))
             {
-                
-                if (key.ToString().CompareTo(current.data.ToString()) > 0)
+                // if data < node data- search left node else search rigth node
+                if (data.ToString().CompareTo(current.data.ToString()) > 0)
                     current = current.Left;
                 else
                 current = current.Right;
