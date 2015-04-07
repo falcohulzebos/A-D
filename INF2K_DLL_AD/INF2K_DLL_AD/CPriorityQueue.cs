@@ -77,7 +77,7 @@ namespace INF2K_DLL_AD
             return returner;
         }
 
-        // item class with stored item and priority
+        // item class with stored item and priority with get methods
         private class Item
         {
             T item;

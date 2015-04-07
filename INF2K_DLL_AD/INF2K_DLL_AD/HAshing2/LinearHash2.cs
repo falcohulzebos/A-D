@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace INF2K_DLL_AD
+namespace INF2K_DLL_AD.HAshing2
 {
     class Hashing
     {
@@ -71,7 +71,7 @@ namespace INF2K_DLL_AD
                 }
             }
         }
-
+        
         static int betterHash(string s, string[] arr)
         {
             //setting the total, the total will be filled with the hash value of a string
