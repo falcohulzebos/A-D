@@ -12,7 +12,7 @@ class Program
         {
             LinkedList collection = new LinkedList();
             Console.WriteLine("Invoeren gegevens: ");
-            collection.Insert("een", "header");
+            collection.InsertFirst("een");
             collection.Insert("twee", "een");
             collection.Insert("drie", "twee");
             collection.Insert("vier", "drie");
@@ -23,7 +23,7 @@ class Program
             Console.WriteLine("");
             Console.WriteLine("");
             Console.WriteLine("");
-            collection.Remove("vier");
+            collection.Remove("vijf");
             Console.WriteLine("");
             collection.PrintList();
             Console.ReadLine();
@@ -65,6 +65,7 @@ class Program
             count = 0;
             header = new Node("header");
             header.next = header;
+           
         }
 
         public bool IsEmpty() 
@@ -95,10 +96,13 @@ class Program
         private Node FindPrevious(Object n) 
         {
             Node current = header.next;
-
-            while (!(current.previous == null) && current.previous.Element !=n)
+            Console.WriteLine("current " + current.Element.ToString());
+            
+            while (!(current.next == null) && current.next.Element !=n)
             {
-                current = current.previous;
+               
+                    current = current.next;
+                
             }
             return current;
          }
@@ -118,10 +122,11 @@ class Program
         public void Remove(Object n) 
         {
             Node p = FindPrevious(n);
+            Console.WriteLine("previous= " + p.Element.ToString());
             try { 
             if (!(p.next == null))
             {
-                p.previous = p.next.next;
+                p.next = p.next.next;
             }
             count--;
             }
@@ -136,6 +141,7 @@ class Program
             current = Find(n2);
             newnode.next = current.next;
             current.next = newnode;
+           
             count++;
         }
 
@@ -144,6 +150,7 @@ class Program
             Node current = new Node(n);
             current.next = header;
             header.next = current;
+           
             count++;
 
         }
