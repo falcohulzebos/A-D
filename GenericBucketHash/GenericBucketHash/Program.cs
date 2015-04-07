@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Collections;
 
-namespace BucketHash
+namespace GenericBucketHash
 {
-
-    class uitvoeren
+    class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             HashTable<String, int> collection = new HashTable<String, int>(101);
 
@@ -25,12 +23,13 @@ namespace BucketHash
 
             Console.WriteLine("eerste invoer:");
             collection.Display();
-           
+            collection.Remove("bier");
+            Console.WriteLine("na verwijderen:");
+            collection.Display();
+            Console.ReadLine();
         }
     }
-    
-    
-    
+
     // Generic collection klasse met Key, Value
     // klasse wordt gebruikt om een Generic key/value object te maken
     // en hierbij meteen een nieuw key/value object te maken als bucket.
@@ -71,8 +70,9 @@ namespace BucketHash
                 }
                 Console.WriteLine();
                 
+
             }
-            
+            //Console.ReadLine();
         }
 
         // De hashfunctie om de key van het object om te zetten naar een int.
@@ -116,13 +116,16 @@ namespace BucketHash
             Node<T, U> previous = null;
             for (Node<T, U> extra = buckets[hashValue]; extra != null; extra = extra.next)
             {
-                if ((hashValue == extra) && key.equals(extra.key))
-                { 
+                if ((hashValue == extra.GetHashCode()))
+                {
+                    buckets[hashValue] = null;
                 }
             }
 
-            Console.ReadLine();
+            
         }
 
     }
+
+
 }
