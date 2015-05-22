@@ -1,7 +1,7 @@
 ﻿using System;
 namespace INF2K_DLL_AD.HAshing2
 {
-    public class Hashing
+    public class LinearHash
     {
         //Hash function
         static int simpleHash(string s, string[] arr)

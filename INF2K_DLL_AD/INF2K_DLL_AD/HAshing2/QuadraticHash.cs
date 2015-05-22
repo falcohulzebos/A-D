@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace INF2K_DLL_AD.HAshing2
 {
-    class QuadraticHash
+    class QuadraticHash2
     {
         static void Main()
         {
